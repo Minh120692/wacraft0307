@@ -1,0 +1,108 @@
+export default function ContactSection() {
+  return (
+    <section id="contact" className="contact section light-background">
+      <div className="container section-title">
+        <span className="subtitle">Contact Us</span>
+        <h2>問い合わせ</h2>
+        <p>
+          まずはお気軽にご相談ください。<br />
+          業務内容の整理から、最適なプランのご提案まで、無料でサポートいたします。<br />
+          小さな業務からでも、すぐに始められます。<br />
+          24〜48時間以内に、こちらから折り返しご連絡いたします。
+        </p>
+      </div>
+
+      <div className="container">
+        <div className="row gy-4">
+          <div className="col-lg-12">
+            <div className="form-wrapper">
+              <div className="form-header">
+                <h3>メッセージを送る</h3>
+              </div>
+
+              <form action="/api/contact" method="post" className="php-email-form">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label>フルネーム</label>
+                      <input type="text" name="name" required />
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label>メールアドレス</label>
+                      <input type="email" name="email" required />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <label>件名</label>
+                  <input type="text" name="subject" required />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="projectMessage">メッセージ</label>
+                  <textarea name="message" id="projectMessage" rows="5" required></textarea>
+                </div>
+
+                <div className="form-group">
+                  <label>ご都合の良い日時（任意）</label>
+                  <div className="row g-2">
+                    <div className="col-md-5">
+                      <input type="date" id="preferredDate" className="form-control" placeholder="YYYY-MM-DD" />
+                    </div>
+                    <div className="col-md-3">
+                      <select id="preferredHour" className="form-control">
+                        <option value="">Hour</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                    <div className="col-md-2">
+                      <select id="preferredMinute" className="form-control">
+                        <option value="00">00</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                      </select>
+                    </div>
+                    <div className="col-md-2">
+                      <select id="preferredPeriod" className="form-control">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <input type="hidden" id="preferredDatetime" name="preferred_datetime" />
+                </div>
+
+                <div className="my-3">
+                  <div className="loading">読み込み中</div>
+                  <div className="error-message"></div>
+                  <div className="sent-message">24時間から48時間以内にご連絡いたします。</div>
+                </div>
+
+                <button type="submit" className="submit-btn">
+                  <span>メッセージを送る</span>
+                  <i className="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

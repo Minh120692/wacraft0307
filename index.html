@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Axis Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&family=Kosugi+Maru&family=M+PLUS+1p:wght@300;400;500;700&family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Shippori+Mincho:wght@400;700&family=Sawarabi+Mincho&family=Zen+Maru+Gothic&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Axis
+  * Template URL: https://bootstrapmade.com/axis-bootstrap-corporate-template/
+  * Updated: Sep 13 2025 with Bootstrap v5.3.8
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <style>
+    :root{
+      --body-font: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+      --heading-font: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+      --rounded-font: "Kosugi Maru", "Noto Sans JP", "Meiryo", sans-serif;
+
+      /* New font variables (additional Japanese options) */
+      --mplus-font: "M PLUS 1p", "Noto Sans JP", sans-serif;
+      --mplus-rounded-font: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif;
+      --shippori-font: "Shippori Mincho", "Noto Serif JP", serif;
+      --sawarabi-font: "Sawarabi Mincho", "Noto Serif JP", serif;
+      --zen-marugothic-font: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+      --zen-kaku-font: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+
+      --ui-font: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, -apple-system, sans-serif;
+      --hiragino-font: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans JP", sans-serif;
+      --meiryo-font: "Meiryo", "Yu Gothic", "Noto Sans JP", sans-serif;
+      --mono-font: "SFMono-Regular", "Noto Sans Mono", Menlo, Monaco, "Courier New", monospace;
+      --condensed-font: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+
+      /* Section background logo - set path here (change if needed) */
+      --section-logo-url: url("assets/img/logo.jpg");
+    }
+
+    /* Default page font (sans) */
+    body {
+      font-family: var(--body-font);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Headings (serif) */
+    h1,h2,h3,h4,h5,h6, .sitename, .logo h1 {
+      font-family: var(--heading-font);
+    }
+
+    /* Rounded style for buttons/badges when desired */
+    .rounded-jp {
+      font-family: var(--rounded-font);
+    }
+
+    /* Utility classes to switch fonts on elements */
+    .font-sans { font-family: var(--body-font) !important; }
+    .font-serif { font-family: var(--heading-font) !important; }
+    .font-rounded { font-family: var(--rounded-font) !important; }
+
+    /* New utility classes for additional Japanese fonts */
+    .font-mplus { font-family: var(--mplus-font) !important; }
+    .font-mplus-rounded { font-family: var(--mplus-rounded-font) !important; }
+    .font-shippori { font-family: var(--shippori-font) !important; }
+    .font-sawarabi { font-family: var(--sawarabi-font) !important; }
+    .font-zen-marugothic { font-family: var(--zen-marugothic-font) !important; }
+    .font-zen-kaku { font-family: var(--zen-kaku-font) !important; }
+
+    .font-ui       { font-family: var(--ui-font) !important; }        /* clear UI text */
+    .font-hiragino { font-family: var(--hiragino-font) !important; }  /* Hiragino-heavy stack */
+    .font-meiryo   { font-family: var(--meiryo-font) !important; }    /* Windows/Japanese-friendly */
+    .font-condensed{ font-family: var(--condensed-font) !important; letter-spacing: -0.02em; } /* compact headings */
+    .font-mono     { font-family: var(--mono-font) !important; font-size: 0.95em; } /* code / price tables */
+
+    /* Ensure form controls and UI use readable font */
+    button, input, textarea, select {
+      font-family: var(--body-font);
+    }
+
+    /* ==========================================================
+       New styles to add a faint logo background behind each .section
+       - Uses a centered pseudo-element with fixed size so it won't be cut
+       - Responsive adjustments for smaller screens
+       ========================================================== */
+    .section {
+      position: relative; /* create stacking context for the pseudo-element */
+      overflow: visible;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px; /* fixed visual size, adjust as needed */
+      height: 350px;
+      background-image: var(--section-logo-url);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      opacity: 0.06; /* faint */
+      filter: saturate(0%) blur(0px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Smaller on narrow screens */
+    @media (max-width: 992px) {
+      .section::before {
+        width: 160px;
+        height: 160px;
+        opacity: 0.05;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .section::before {
+        width: 110px;
+        height: 110px;
+        opacity: 0.045;
+      }
+    }
+
+    /* Ensure visible content sits above the background logo */
+    .section > .container,
+    .section .container,
+    .section .content,
+    .section .hero-content,
+    .section .project-details,
+    .section .image-wrapper,
+    .section .director-content,
+    .section .form-wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+   
+
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo-removebg-preview.png" alt="Axis logo" class="logo-img">
+        <!-- <h1 class="sitename">Axis</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <!-- <ul>
+          <li><a href="#hero" class="active">ホーム</a></li>
+          <li><a href="#about">私たちについて</a></li>
+          <li><a href="#services">サービス</a></li>
+          <li><a href="#portfolio">ポートフォリオ</a></li>
+          <li><a href="#team">チーム</a></li>
+          <li class="dropdown"><a href="#"><span>ドロップダウン</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">ドロップダウン 1</a></li>
+              <li class="dropdown"><a href="#"><span>深いドロップダウン</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">深いドロップダウン 1</a></li>
+                  <li><a href="#">深いドロップダウン 2</a></li>
+                  <li><a href="#">深いドロップダウン 3</a></li>
+                  <li><a href="#">深いドロップダウン 4</a></li>
+                  <li><a href="#">深いドロップダウン 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">ドロップダウン 2</a></li>
+              <li><a href="#">ドロップダウン 3</a></li>
+              <li><a href="#">ドロップダウン 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">連絡先</a></li>
+          <li><a href="index-en.html" class="lang-switch">English</a></li>
+        </ul> -->
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="solutions.html">Our Solutions</a></li>
+          <li><a href="why-us.html">Why Choose Us</a></li>
+          <li><a href="team.html">Team</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>ドロップダウン</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">ドロップダウン 1</a></li>
+              <li class="dropdown"><a href="#"><span>深いドロップダウン</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">深いドロップダウン 1</a></li>
+                  <li><a href="#">深いドロップダウン 2</a></li>
+                  <li><a href="#">深いドロップダウン 3</a></li>
+                  <li><a href="#">深いドロップダウン 4</a></li>
+                  <li><a href="#">深いドロップダウン 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">ドロップダウン 2</a></li>
+              <li><a href="#">ドロップダウン 3</a></li>
+              <li><a href="#">ドロップダウン 4</a></li>
+            </ul>
+          </li> -->
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="index-en.html" class="lang-switch">English</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1 data-aos="fade-up" data-aos-delay="200">AIーBPO × 日本語対応ベトナムチームで、業務を受託</h1>
+              <p data-aos="fade-up" data-aos-delay="300" class="fw-bold">日本語で伝わる。海外で動く。成果が返ってくる。</p>
+              <p data-aos="fade-up" data-aos-delay="300" class="mb-5">日本語対応のベトナム人材とAIを組み合わせ、業務の精度とスピードを両立。中小企業、スタートアップ企業を支える、柔軟で拡張性の高いサービスを提供します。</p>
+              <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                <a href="#about" class="btn-primary">まずは相談する</a>
+                <!-- <a href="#https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn-secondary glightbox">
+                  <i class="bi bi-play-circle"></i>
+                  サービス資料を見る（任意）
+                </a> -->
+              </div>
+              <!-- <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                <div class="stat-item">
+                  <div class="stat-number">500+</div>
+                  <div class="stat-label">成功事例</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">98%</div>
+                  <div class="stat-label">顧客満足度</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">10+</div>
+                  <div class="stat-label">経験年数</div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+              <img src="assets/img/about/hahoangmedia-39 (1).jpg" alt="Business Success" class="img-fluid">
+              <!-- <div class="floating-card" data-aos="zoom-in" data-aos-delay="600">
+                <div class="card-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="card-content">
+                  <h5>収益の成長</h5>
+                  <div class="growth-percentage">+45%</div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+    
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="content">
+              <h2>革新と献身を重ね、確かな成果を届けます。</h2>
+              <p class="lead">私たちは、お客様の期待を超える成果を提供し、意味のある変革を推進することに情熱を注ぐプロフェッショナル集団です。</p>
+
+              <p>日本とベトナムを拠点に、日本語対応が可能な優秀なベトナム人材と最新のAI技術を融合させたBPOサービスを提供しています。 私たちのミッションは、中小企業やスタートアップ企業の皆様が直面する業務の「手間」を、確かな「成果」へと変えることです。</p>
+
+              <p>単なる業務代行にとどまらず、スピード、品質、コストのバランスを最適化し、貴社の成長を加速させる「もうひとつのチーム」として寄り添います。 海外リソース活用のハードルをゼロにし、国内と同じ感覚でスムーズな連携を実現します。</p>
+
+              <div class="stats-row">
+                <div class="stat-item">
+                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"></div>
+                  <div class="stat-label">経験年数</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="1"></div>
+                  <div class="stat-label">完了したプロジェクト</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="240" data-purecounter-duration="1"></div>
+                  <div class="stat-label">満足したクライアント</div>
+                </div>
+              </div>
+              
+
+              <div class="cta-section">
+                <a href="#team" team="" class="btn-outline">チームに会う</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="image-wrapper">
+              <img src="assets/img/about/about-square-12.webp" alt="About us" class="img-fluid">
+              <!-- <div class="floating-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="card-content">
+                  <div class="icon">
+                    <i class="bi bi-award"></i>
+                  </div>
+                  <div class="text">
+                    <h4>受賞歴</h4>
+                    <p>業界での卓越性が認められています</p>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Director Section -->
+    
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Our Solutions</span>
+        <h2>私たちが提供するもの</h2>
+        <p>日々のルーティン業務から専門性の高いタスクまで、貴社のニーズに合わせた最適なソリューションを提供します。日本語対応のベトナム人材とAIの力を組み合わせることで、業務の精度とスピードを両立させ、企業のDXと成長を力強くバックアップします。</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <div>
+                <h3>BPO Service</h3>
+                <p>データ入力、顧客管理、リスト整備など、日々のバックオフィス業務を幅広くサポートします。業務負荷を大幅に軽減し、貴社チームがコア業務に集中できる環境をつくります。</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-palette"></i>
+              </div>
+              <div>
+                <h3>Sales Support</h3>
+                <p>ターゲット精度の高い見込み顧客リストの作成から、アポイント獲得、メールマーケティングまで、営業活動を効率化します。成果に直結する仕組みづくりを支援し、成約率の向上に貢献します。</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <div>
+                <h3>AI Utilization Support</h3>
+                <p>AIツールの導入サポートや業務の自動化により、貴社のDX（デジタルトランスフォーメーション）を推進します。人とAIの最適な役割分担を設計し、生産性を最大化するワークフローを構築します。</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-megaphone"></i>
+              </div>
+              <div>
+                <h3>Recruitment Support</h3>
+                <p>候補者リストの作成から、スクリーニング、面接のスケジュール調整まで、採用活動のバックオフィス業務をトータルに代行します。煩雑な事務作業を切り離すことで、採用活動のスピードと質を大幅に向上させます。</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <div>
+                <h3>Team Building</h3>
+                <p>日本語対応のベトナム人材を活用し、貴社の「もうひとつのチーム」を構築します。1名・数時間の小規模スタートから柔軟に対応し、企業の成長フェーズに合わせて最適なチーム体制をスケールアップさせることが可能です。</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-bar-chart"></i>
+              </div>
+              <div>
+                <h3>Data Analysis and Organization</h3>
+                <p>AIツールと人の判断を組み合わせ、大量のデータ入力やリスト整備、情報の構造化を効率的に行います。複雑なデータの整理を自動化・効率化することで、迅速な意思決定を支える高精度なデータ基盤を提供します。</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Why choose us</span>
+        <h2>選ばれる理由</h2>
+        <p>提携先として当社が選ばれる理由は、単なるコスト削減に留まらず、日本品質のコミュニケーションと最新テクノロジーを融合させた「攻めのバックオフィス」を実現できる点にあります。</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="content">
+              <h2>なぜ私たちは選ばれるのか？</h2>
+              <p>提供いただいた資料 に基づき、主な強みを整理しました。</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="image-wrapper">
+              <img src="assets/img/about/hahoangmedia-31 (1).jpg" alt="Professional team collaboration" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+        <div class="features-grid" data-aos="fade-up" data-aos-delay="400">
+          <div class="row g-5">
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Highly efficient operations using AI</h3>
+                  <p>AIツールと人の判断を組み合わせることで、スピードと精度を両立。単純作業から高度な業務まで、最適なワークフローを構築します。</p>
+                </div>
+              </div>
+            </div><!-- End Feature Item -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-award"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Vietnamese staff who can speak Japanese</h3>
+                  <p>日本語でのコミュニケーションが可能なスタッフが、正確かつ丁寧に業務を遂行します。文化的なニュアンスも理解し、安心して任せられる体制を整えています。</p>
+                </div>
+              </div>
+            </div><!-- End Feature Item -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-headset"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Eliminating the hurdles to utilizing overseas resources</h3>
+                  <p>面倒な管理や調整はすべて当社が代行。国内と同じ感覚で、海外リソースを活用できます。</p>
+                </div>
+              </div>
+            </div><!-- End Feature Item -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>The flexibility to start small and expand greatly</h3>
+                  <p>1名・数時間からスタートでき、必要に応じてスケールアップが可能。企業の成長フェーズに合わせて柔軟に対応します。</p>
+                </div>
+              </div>
+            </div><!-- End Feature Item -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+   
+    <!-- <section id="portfolio" class="portfolio section light-background">
+
+     
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">ポートフォリオ</span>
+        <h2>私たちのポートフォリオをチェック</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+            <li data-filter="*" class="filter-active">すべての作品</li>
+            <li data-filter=".filter-design">BPOサービス</li>
+            <li data-filter=".filter-development">営業支援</li>
+            <li data-filter=".filter-strategy">AI活用支援</li>
+            <li data-filter=".filter-consulting">採用サポート</li>
+            <li data-filter=".filter-service">カスタマーサポート</li>
+          </ul>
+
+          <div class="row gy-5 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-design">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="project-visual">
+                      <img src="assets/img/about/bpo_la_gi_5_fd76541119.jpg" alt="Enterprise Digital Platform" class="img-fluid" loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="assets/img/about/bpo_la_gi_5_fd76541119.jpg" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <div>
+                          <h4 class="fw-bold">BPO Service</h4>
+                        </div>
+                        <div class="project-header-text">
+                          <span class="project-category">BPOサービス</span>
+                          <time class="project-year">2024</time>
+                        </div>
+                      </div>
+                      <p class="project-description">データ入力、顧客管理、リスト整備、メール対応など、日々の業務を幅広くサポート。業務負荷を軽減し、コア業務に集中できる環境をつくります。</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-development">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6 order-md-2">
+                    <div class="project-visual">
+                      <img src="assets/img/about/kdoanh.png" alt="SaaS Product Suite" class="img-fluid" loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="assets/img/about/kdoanh.png" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 order-md-1">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <div>
+                          <h4 class="fw-bold">Sales Support</h4>
+                        </div>
+                        <div class="project-header-text">
+                          <span class="project-category">営業支援</span>
+                          <time class="project-year">2024</time>
+                        </div>
+                      </div>
+                      <p class="project-description">見込み顧客リストの作成、アポイント獲得、メールマーケティングなど、営業活動を効率化。成果につながる仕組みづくりを支援します。</p>
+                    
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-strategy">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="project-visual">
+                      <img src="assets/img/about/where-is-ai-used-1024x683.jpeg" alt="Brand Transformation" class="img-fluid" loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="assets/img/about/where-is-ai-used-1024x683.jpeg" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <div>
+                          <h4 class="fw-bold">AI Utilization Support</h4>
+                        </div>
+                        <div class="project-header-text">
+                          <span class="project-category">AI活用支援</span>
+                          <time class="project-year">2023</time>
+                        </div>
+                      </div>
+                      <p class="project-description">AIツールの導入サポート、業務自動化、データ整理など、企業のDXを推進。人とAIの最適な役割分担を設計します。</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-consulting">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6 order-md-2">
+                    <div class="project-visual">
+                      <img src="assets/img/about/tuydung.jpg" alt="Digital Transformation" class="img-fluid" loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="assets/img/about/tuydung.jpg" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 order-md-1">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <div>
+                          <h4 class="fw-bold">Recruitment Support</h4>
+                        </div>
+                        <div class="project-header-text">
+                          <span class="project-category">採用サポート</span>
+                          <time class="project-year">2024</time>
+                        </div>
+                      </div>
+                      <p class="project-description">候補者リスト作成、スクリーニング、面接調整など、採用業務のバックオフィスを代行。採用活動のスピードを高めます。</p>
+                     
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-service">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="project-visual">
+                      <img src="assets/img/about/crm.jpg" alt="E-commerce Experience" class="img-fluid" loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="assets/img/about/crm.jpg" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <div>
+                          <h4 class="fw-bold">Customer Support</h4>
+                        </div>
+                        <div class="project-header-text">
+                          <span class="project-category">カスタマーサポート</span>
+                          <time class="project-year">2026</time>
+                        </div>
+                      </div>
+                      <p class="project-description">問い合わせ対応、FAQ整備、顧客データ管理など、顧客満足度向上につながる業務をサポートします。</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            
+
+          </div>
+
+        </div>
+
+        <div class="portfolio-conclusion" data-aos="fade-up" data-aos-delay="400">
+          <div class="conclusion-content">
+            <h4>ビジネスを次のレベルへ引き上げる準備はできていますか？</h4>
+            <p>デジタルプレゼンスを変革し、組織にとって意味のある成果を生み出す方法について話し合いましょう。</p>
+            <div class="conclusion-actions">
+              <a href="#contact" class="primary-action">
+                会話を始める
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#portfolio" class="secondary-action">
+                すべてのプロジェクトを見る
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section> -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Team</span>
+        <h2>私たちのチームを紹介します</h2>
+        <p>企業の成長を支える、裏方のプロフェッショナル。
+        私たちは、日本とベトナムを拠点に、中小企業・スタートアップの業務効率化を支援するBPOサービスを提供しています。
+        「日本語で伝わる」「海外で動く」「成果が返ってくる」仕組みをつくり、企業の挑戦を裏側から支えます。
+        </p>
+      </div><!-- End Section Title -->
+      <section id="director" class="director section">
+        <div class="container" data-aos="fade-up">
+          <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+              <div class="director-content">
+                
+                <div class="director-info mt-4">
+                  <h4>Takahiko Nomoto</h4>
+                  <p class="text-muted">野本 隆彦 – 最高技術責任者（CEO））</p>
+                  <p>経験豊富なリーダーとして、イノベーションと卓越性の追求を組織に導いています。テクノロジーとビジネスの交点で、変革的なソリューションを実現しています。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+              <div class="director-image">
+                <img src="assets/img/person/person-m-12.webp" alt="Director Profile" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- /Director Section -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+          <div class="d-flex justify-content-center">
+            <div class="d-flex flex-column align-items-center">
+              <h3 class="fw-bold">Key member</h3>
+              <span>主要メンバー</span>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              
+              <div class="member-img">
+                <img src="assets/img/person/person-f-8.webp" class="img-fluid" alt="Sarah Johnson" loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Nhat Minh</h4>
+                <span>チームマネージャー</span>
+                <p>チームマネージャーとして、チームの方向性を統括しながら、円滑なコミュニケーションと高品質なクリエイティブ制作を推進しています。柔軟な発想と実行力を活かし、魅力的なコンテンツと成果の最大化を目指しています。</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="team-member">
+              
+              <div class="member-img">
+                <img src="assets/img/person/person-m-12.webp" class="img-fluid" alt="Michael Chen" loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Takahiko Nomoto</h4>
+                <span>最高技術責任者</span>
+                <p>経験豊富なリーダーとして、イノベーションと卓越性の追求を組織に導いています。テクノロジーとビジネスの交点で、変革的なソリューションを実現しています。</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              
+              <div class="member-img">
+                <img src="assets/img/person/person-f-3.webp" class="img-fluid" alt="Emily Rodriguez" loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Thao Nippon</h4>
+                <span>クリエイティブディレクター</span>
+                <p>視覚的なストーリーテリングを通じて、ブランドのアイデンティティを確立します。最新のデザイン・トレンドを巧みに取り入れ、ユーザーの心に響く直感的で魅力的な体験を創造することを得意としています。</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-dribbble"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="350">
+            <div class="team-member">
+              
+              <div class="member-img">
+                <img src="assets/img/person/person-m-7.webp" class="img-fluid" alt="David Thompson" loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Hai Dang</h4>
+                <span>オペレーション責任者</span>
+                <p>効率的なビジネスプロセスの構築と最適化のスペシャリストです。リソース管理からチームのパフォーマンス向上まで、組織全体の運営を円滑にし、目標達成に向けた確実な土台を築きます。</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+    
+  <!-- Floating Contact Button -->
+<button id="contactToggleBtn" class="floating-contact-btn">
+  <i class="bi bi-chat-dots-fill"></i>
+</button>
+
+<!-- Contact Popup -->
+<div id="contactPopup" class="contact-popup">
+  <div class="contact-popup-content">
+
+    <!-- Close Button -->
+    <button class="close-popup" id="closePopup">
+      <i class="bi bi-x-lg"></i>
+    </button>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact section light-background">
+
+      <div class="container section-title">
+        <span class="subtitle">Contact Us</span>
+        <h2>問い合わせ</h2>
+        <p>
+          まずはお気軽にご相談ください。<br>
+          業務内容の整理から、最適なプランのご提案まで、無料でサポートいたします。<br>
+          小さな業務からでも、すぐに始められます。<br>
+          24〜48時間以内に、こちらから折り返しご連絡いたします。
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-12">
+
+            <div class="form-wrapper">
+              <div class="form-header">
+                <h3>メッセージを送る</h3>
+              </div>
+
+              <form action="form-mail/send_email.php" method="post" class="php-email-form">
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>フルネーム</label>
+                      <input type="text" name="name" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>メールアドレス</label>
+                      <input type="email" name="email" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>件名</label>
+                  <input type="text" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="projectMessage">メッセージ</label>
+                  <textarea name="message" id="projectMessage" rows="5" required></textarea>
+                </div>
+
+                <!-- Preferred date/time for contact -->
+                <div class="form-group">
+                  <label>ご都合の良い日時（任意）</label>
+                  <div class="row g-2">
+                    <div class="col-md-5">
+                      <input type="date" id="preferredDate" class="form-control" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="col-md-3">
+                      <select id="preferredHour" class="form-control">
+                        <option value="">Hour</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <select id="preferredMinute" class="form-control">
+                        <option value="00">00</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <select id="preferredPeriod" class="form-control">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <input type="hidden" id="preferredDatetime" name="preferred_datetime">
+                </div>
+
+                <div class="my-3">
+                  <div class="loading">読み込み中</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    24時間から48時間以内にご連絡いたします。
+                  </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  <span>メッセージを送る</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center flex-direction-column">
+            <img src="assets/img/logo-removebg-preview.png" alt="WA+CRAFT logo" class="logo-img">
+          </a>
+          <div class="brand-text">
+            <h4 class="mb-0">WA+CRAFT</h4>
+            <p class="tagline mb-0" style="font-size:0.95rem; opacity:0.85;">Harmony Through Craftsmanship</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Our Solutions</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">BPOサービス</a></li>
+            <li><a href="#">営業支援</a></li>
+            <li><a href="#">AI活用支援</a></li>
+            <li><a href="#">採用サポート</a></li>
+            <li><a href="#">データ分析・整理</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact</h4>
+          <p><i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>15 Ngo Thi Si Street, Ngu Hanh Son Ward, Da Nang City, Vietnam</p>
+          <p class="mt-4"><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i><span>+84 91 723 1967 (VN)</span></p>
+          <p class=""><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i><span>+81 70 9103 1967 (JP)</span></p>
+          <p><i class="bi bi-envelope-fill me-2" aria-hidden="true"></i><a href="mailto:nomoto-t@wacraft-jp.com">nomoto-t@wacraft-jp.com</a></p>
+          <p><i class="bi bi-globe me-2" aria-hidden="true"></i>www.wacraft-jp.com</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script>
+    (function(){
+      function pad(n){ return String(n).padStart(2,'0'); }
+      function buildPreferred(){
+        var dateEl = document.getElementById('preferredDate');
+        var hourEl = document.getElementById('preferredHour');
+        var minEl = document.getElementById('preferredMinute');
+        var periodEl = document.getElementById('preferredPeriod');
+        var hidden = document.getElementById('preferredDatetime');
+        if(!hidden) return;
+        var date = dateEl ? dateEl.value : '';
+        var hour = hourEl ? hourEl.value : '';
+        var minute = minEl ? minEl.value : '00';
+        var period = periodEl ? periodEl.value : '';
+        if(!date || !hour){ hidden.value = ''; return; }
+        var h = parseInt(hour, 10);
+        if(period === 'PM' && h < 12) h += 12;
+        if(period === 'AM' && h === 12) h = 0;
+        hidden.value = date + ' ' + pad(h) + ':' + pad(minute || '00');
+      }
+
+      var form = document.querySelector('form.php-email-form');
+      if(form){
+        ['preferredDate','preferredHour','preferredMinute','preferredPeriod'].forEach(function(id){
+          var el = document.getElementById(id);
+          if(el) el.addEventListener('change', buildPreferred);
+        });
+        form.addEventListener('submit', function(e){ buildPreferred(); });
+      }
+    })();
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

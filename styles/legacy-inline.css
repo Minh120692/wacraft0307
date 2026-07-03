@@ -1,0 +1,113 @@
+:root{
+  --body-font: "Zen Kaku Gothic New", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Zen Kaku Gothic New", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  --rounded-font: "Zen Kaku Gothic New", "Noto Sans JP", "Meiryo", sans-serif;
+  --mplus-font: "M PLUS 1p", "Noto Sans JP", sans-serif;
+  --mplus-rounded-font: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif;
+  --shippori-font: "Shippori Mincho", "Noto Serif JP", serif;
+  --sawarabi-font: "Sawarabi Mincho", "Noto Serif JP", serif;
+  --zen-marugothic-font: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+  --zen-kaku-font: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  --ui-font: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, -apple-system, sans-serif;
+  --hiragino-font: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans JP", sans-serif;
+  --meiryo-font: "Meiryo", "Yu Gothic", "Noto Sans JP", sans-serif;
+  --mono-font: "SFMono-Regular", "Noto Sans Mono", Menlo, Monaco, "Courier New", monospace;
+  --condensed-font: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+  --section-logo-url: url("/assets/img/logo.jpg");
+}
+
+body,
+button,
+input,
+textarea,
+select,
+.navmenu a,
+p,
+span,
+li,
+a,
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rounded-jp {
+  font-family: var(--rounded-font);
+}
+
+.font-sans { font-family: var(--body-font) !important; }
+.font-serif { font-family: var(--heading-font) !important; }
+.font-rounded { font-family: var(--rounded-font) !important; }
+.font-mplus { font-family: var(--mplus-font) !important; }
+.font-mplus-rounded { font-family: var(--mplus-rounded-font) !important; }
+.font-shippori { font-family: var(--shippori-font) !important; }
+.font-sawarabi { font-family: var(--sawarabi-font) !important; }
+.font-zen-marugothic { font-family: var(--zen-marugothic-font) !important; }
+.font-zen-kaku { font-family: var(--zen-kaku-font) !important; }
+.font-ui { font-family: var(--ui-font) !important; }
+.font-hiragino { font-family: var(--hiragino-font) !important; }
+.font-meiryo { font-family: var(--meiryo-font) !important; }
+.font-condensed { font-family: var(--condensed-font) !important; letter-spacing: -0.02em; }
+.font-mono { font-family: var(--mono-font) !important; font-size: 0.95em; }
+
+button, input, textarea, select {
+  font-family: var(--body-font);
+}
+
+.section {
+  position: relative;
+  overflow: visible;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  background-image: var(--section-logo-url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.06;
+  filter: saturate(0%) blur(0px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 992px) {
+  .section::before {
+    width: 160px;
+    height: 160px;
+    opacity: 0.05;
+  }
+}
+
+@media (max-width: 576px) {
+  .section::before {
+    width: 110px;
+    height: 110px;
+    opacity: 0.045;
+  }
+}
+
+.section > .container,
+.section .container,
+.section .content,
+.section .hero-content,
+.section .project-details,
+.section .image-wrapper,
+.section .director-content,
+.section .form-wrapper {
+  position: relative;
+  z-index: 1;
+}

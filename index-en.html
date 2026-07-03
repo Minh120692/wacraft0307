@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Axis Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&family=Kosugi+Maru&family=M+PLUS+1p:wght@300;400;500;700&family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Shippori+Mincho:wght@400;700&family=Sawarabi+Mincho&family=Zen+Maru+Gothic&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Axis
+  * Template URL: https://bootstrapmade.com/axis-bootstrap-corporate-template/
+  * Updated: Sep 13 2025 with Bootstrap v5.3.8
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <style>
+    :root{
+      --body-font: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+      --heading-font: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+      --rounded-font: "Kosugi Maru", "Noto Sans JP", "Meiryo", sans-serif;
+
+      /* New font variables (additional Japanese options) */
+      --mplus-font: "M PLUS 1p", "Noto Sans JP", sans-serif;
+      --mplus-rounded-font: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif;
+      --shippori-font: "Shippori Mincho", "Noto Serif JP", serif;
+      --sawarabi-font: "Sawarabi Mincho", "Noto Serif JP", serif;
+      --zen-marugothic-font: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+      --zen-kaku-font: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+
+      --ui-font: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, -apple-system, sans-serif;
+      --hiragino-font: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans JP", sans-serif;
+      --meiryo-font: "Meiryo", "Yu Gothic", "Noto Sans JP", sans-serif;
+      --mono-font: "SFMono-Regular", "Noto Sans Mono", Menlo, Monaco, "Courier New", monospace;
+      --condensed-font: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+
+      /* Section background logo - set path here (change if needed) */
+      --section-logo-url: url("assets/img/logo.jpg");
+    }
+
+    /* Default page font (sans) */
+    body {
+      font-family: var(--body-font);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Headings (serif) */
+    h1,h2,h3,h4,h5,h6, .sitename, .logo h1 {
+      font-family: var(--heading-font);
+    }
+
+    /* Rounded style for buttons/badges when desired */
+    .rounded-jp {
+      font-family: var(--rounded-font);
+    }
+
+    /* Utility classes to switch fonts on elements */
+    .font-sans { font-family: var(--body-font) !important; }
+    .font-serif { font-family: var(--heading-font) !important; }
+    .font-rounded { font-family: var(--rounded-font) !important; }
+
+    /* New utility classes for additional Japanese fonts */
+    .font-mplus { font-family: var(--mplus-font) !important; }
+    .font-mplus-rounded { font-family: var(--mplus-rounded-font) !important; }
+    .font-shippori { font-family: var(--shippori-font) !important; }
+    .font-sawarabi { font-family: var(--sawarabi-font) !important; }
+    .font-zen-marugothic { font-family: var(--zen-marugothic-font) !important; }
+    .font-zen-kaku { font-family: var(--zen-kaku-font) !important; }
+
+    .font-ui       { font-family: var(--ui-font) !important; }        /* clear UI text */
+    .font-hiragino { font-family: var(--hiragino-font) !important; }  /* Hiragino-heavy stack */
+    .font-meiryo   { font-family: var(--meiryo-font) !important; }    /* Windows/Japanese-friendly */
+    .font-condensed{ font-family: var(--condensed-font) !important; letter-spacing: -0.02em; } /* compact headings */
+    .font-mono     { font-family: var(--mono-font) !important; font-size: 0.95em; } /* code / price tables */
+
+    /* Ensure form controls and UI use readable font */
+    button, input, textarea, select {
+      font-family: var(--body-font);
+    }
+
+    /* ==========================================================
+       New styles to add a faint logo background behind each .section
+       - Uses a centered pseudo-element with fixed size so it won't be cut
+       - Responsive adjustments for smaller screens
+       ========================================================== */
+    .section {
+      position: relative; /* create stacking context for the pseudo-element */
+      overflow: visible;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px; /* fixed visual size, adjust as needed */
+      height: 350px;
+      background-image: var(--section-logo-url);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      opacity: 0.06; /* faint */
+      filter: saturate(0%) blur(0px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Smaller on narrow screens */
+    @media (max-width: 992px) {
+      .section::before {
+        width: 160px;
+        height: 160px;
+        opacity: 0.05;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .section::before {
+        width: 110px;
+        height: 110px;
+        opacity: 0.045;
+      }
+    }
+
+    /* Ensure visible content sits above the background logo */
+    .section > .container,
+    .section .container,
+    .section .content,
+    .section .hero-content,
+    .section .project-details,
+    .section .image-wrapper,
+    .section .director-content,
+    .section .form-wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    
+
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo-removebg-preview.png" alt="Axis logo" class="logo-img">
+        <!-- <h1 class="sitename">Axis</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <!-- <ul>
+          <li><a href="#hero" class="active">ホーム</a></li>
+          <li><a href="#about">私たちについて</a></li>
+          <li><a href="#services">サービス</a></li>
+          <li><a href="#portfolio">ポートフォリオ</a></li>
+          <li><a href="#team">チーム</a></li>
+          <li class="dropdown"><a href="#"><span>ドロップダウン</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">ドロップダウン 1</a></li>
+              <li class="dropdown"><a href="#"><span>深いドロップダウン</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">深いドロップダウン 1</a></li>
+                  <li><a href="#">深いドロップダウン 2</a></li>
+                  <li><a href="#">深いドロップダウン 3</a></li>
+                  <li><a href="#">深いドロップダウン 4</a></li>
+                  <li><a href="#">深いドロップダウン 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">ドロップダウン 2</a></li>
+              <li><a href="#">ドロップダウン 3</a></li>
+              <li><a href="#">ドロップダウン 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">連絡先</a></li>
+          <li><a href="index-en.html" class="lang-switch">English</a></li>
+        </ul> -->
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="about-en.html">About Us</a></li>
+          <li><a href="solutions-en.html">Our Solutions</a></li>
+          <li><a href="why-us-en.html">Why Choose Us</a></li>
+          <li><a href="team-en.html">Team</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>ドロップダウン</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">ドロップダウン 1</a></li>
+              <li class="dropdown"><a href="#"><span>深いドロップダウン</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">深いドロップダウン 1</a></li>
+                  <li><a href="#">深いドロップダウン 2</a></li>
+                  <li><a href="#">深いドロップダウン 3</a></li>
+                  <li><a href="#">深いドロップダウン 4</a></li>
+                  <li><a href="#">深いドロップダウン 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">ドロップダウン 2</a></li>
+              <li><a href="#">ドロップダウン 3</a></li>
+              <li><a href="#">ドロップダウン 4</a></li>
+            </ul>
+          </li> -->
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html" class="lang-switch">Japanese</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1 data-aos="fade-up" data-aos-delay="200">AI-based BPO and a Japanese-speaking Vietnamese team are available to handle your business.</h1>
+              <p data-aos="fade-up" data-aos-delay="300" class="fw-bold">Communicate in Japanese. Operate internationally. Deliver results.</p>
+              <p data-aos="fade-up" data-aos-delay="300" class="mb-5">By combining Japanese-speaking Vietnamese personnel with AI, we achieve both accuracy and speed in our operations. We provide flexible and scalable services to support small and medium-sized enterprises and startups.</p>
+              <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                <a href="#about" class="btn-primary">Consult first</a>
+                <!-- <a href="#https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn-secondary glightbox">
+                  <i class="bi bi-play-circle"></i>
+                  View service materials (optional)
+                </a> -->
+              </div>
+              <!-- <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                <div class="stat-item">
+                  <div class="stat-number">500+</div>
+                  <div class="stat-label">成功事例</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">98%</div>
+                  <div class="stat-label">顧客満足度</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">10+</div>
+                  <div class="stat-label">経験年数</div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+              <img src="assets/img/about/hahoangmedia-39 (1).jpg" alt="Business Success" class="img-fluid">
+              <!-- <div class="floating-card" data-aos="zoom-in" data-aos-delay="600">
+                <div class="card-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="card-content">
+                  <h5>Revenue growth</h5>
+                  <div class="growth-percentage">+45%</div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+    
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="content">
+              <h2>Through innovation and dedication, we deliver tangible results.</h2>
+              <p class="lead">We are a team of professionals passionate about delivering results that exceed expectations and driving meaningful transformation.</p>
+
+              <p>Based in Japan and Vietnam, we provide BPO services that combine Japanese-capable Vietnamese talent with the latest AI technology. Our mission is to convert the operational "busywork" that companies face into tangible, reliable results.</p>
+
+              <p>More than simple outsourcing, we optimize the balance of speed, quality, and cost to accelerate your growth as an integrated extension of your team. We remove the barriers to using overseas resources and enable smooth collaboration with the same ease as domestic teams.</p>
+
+              <div class="stats-row">
+                <div class="stat-item">
+                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"></div>
+                  <div class="stat-label">経験年数</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="1"></div>
+                  <div class="stat-label">完了したプロジェクト</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="240" data-purecounter-duration="1"></div>
+                  <div class="stat-label">満足したクライアント</div>
+                </div>
+              </div>
+              
+
+              <div class="cta-section">
+                <a href="#team" team="" class="btn-outline">Meet the Team</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="image-wrapper">
+              <img src="assets/img/about/about-square-12.webp" alt="About us" class="img-fluid">
+              <!-- <div class="floating-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="card-content">
+                  <div class="icon">
+                    <i class="bi bi-award"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Award history</h4>
+                    <p>Recognized for its excellence in the industry.</p>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Director Section -->
+    
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Our Solutions</span>
+        <h2>What We Offer</h2>
+        <p>From routine daily tasks to specialized assignments, we provide tailored solutions to meet your needs. By combining Japanese-speaking Vietnamese professionals with AI, we deliver both precision and speed to support your company's DX and growth.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <div>
+                <h3>BPO Service</h3>
+                <p>We provide comprehensive support for daily back-office tasks, including data entry, customer management, and list maintenance. This significantly reduces your workload, creating an environment where your team can focus on core business activities.</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-palette"></i>
+              </div>
+              <div>
+                <h3>Sales Support</h3>
+                <p>From creating highly targeted prospect lists to appointment setting and email marketing, we streamline sales activities. We help build systems that directly drive conversions and improve close rates.</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <div>
+                <h3>AI Utilization Support</h3>
+                <p>We will drive your company's DX (Digital Transformation) through AI tool implementation support and business process automation. We will design the optimal division of roles between humans and AI and build workflows that maximize productivity.</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-megaphone"></i>
+              </div>
+              <div>
+                <h3>Recruitment Support</h3>
+                <p>We handle recruitment back-office work end-to-end, from candidate sourcing and screening to interview scheduling. By offloading administrative tasks, we speed up and improve the quality of your hiring process.</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <div>
+                <h3>Team Building</h3>
+                <p>Leverage Japanese-capable Vietnamese talent to build your "extended team." Start small with a single member or a few hours and scale up flexibly as your company grows.</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-bar-chart"></i>
+              </div>
+              <div>
+                <h3>Data Analysis and Organization</h3>
+                <p>Combining AI tools with human judgment, we efficiently perform large-scale data entry, list preparation, and information structuring. We provide accurate data foundations that support fast, informed decision-making.</p>
+              </div>
+              <!-- <a href="service-details.html" class="service-link">
+                詳細を見る <i class="bi bi-arrow-right"></i>
+              </a> -->
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Why Choose Us</span>
+        <h2>Why Choose Us</h2>
+        <p>We are chosen as a partner not just for cost savings but because we blend Japanese-quality communication with cutting-edge technology to create an "advantageous back office" for your business.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="content">
+              <h2>Why are we chosen?</h2>
+              <p>Based on the materials you provided, we have summarized our main strengths.</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="image-wrapper">
+              <img src="assets/img/about/hahoangmedia-31 (1).jpg" alt="Professional team collaboration" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+        <div class="features-grid" data-aos="fade-up" data-aos-delay="400">
+          <div class="row g-5">
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Highly efficient operations using AI</h3>
+                  <p>By combining AI tools with human judgment, we deliver both speed and accuracy. From simple tasks to complex operations, we design the optimal workflow.</p>
+                </div>
+              </div>
+            </div><!-- End Feature Item -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-award"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Vietnamese staff who can speak Japanese</h3>
+                  <p>Our staff are able to communicate in Japanese and perform tasks accurately and courteously. They understand cultural nuance, providing reliable, comfortable collaboration.</p>
+                </div>
+              </div>
+            </div><!-- End Feature Item -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-headset"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Eliminating the hurdles to utilizing overseas resources</h3>
+                  <p>We handle all the management and coordination, allowing you to use overseas resources with the same ease as domestic teams.</p>
+                </div>
+              </div>
+            </div><!-- End Feature Item -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>The flexibility to start small and expand greatly</h3>
+                  <p>Start from a single person or a few hours and scale up as needed. We adapt flexibly to your company's growth phase.</p>
+                </div>
+              </div>
+            </div><!-- End Feature Item -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+
+    <!-- Team Section -->
+    <section id="team" class="team section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Team</span>
+        <h2>Meet Our Team</h2>
+        <p>Behind-the-scenes professionals who support business growth.
+        We operate from Japan and Vietnam to provide BPO services that streamline operations for small businesses and startups.
+        We create systems that "communicate in Japanese," "operate overseas," and "deliver results," supporting your challenges from the background.
+        </p>
+      </div><!-- End Section Title -->
+      <section id="director" class="director section">
+        <div class="container" data-aos="fade-up">
+          <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+              <div class="director-content">
+                
+                <div class="director-info mt-4">
+                  <h4>Takahiko Nomoto</h4>
+                  <p class="text-muted">Takahiko Nomoto – Chief Technology Officer (CEO)</p>
+                  <p>As an experienced leader, I guide organizations toward innovation and the pursuit of excellence. I deliver transformative solutions at the intersection of technology and business.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+              <div class="director-image">
+                <img src="assets/img/person/person-m-12.webp" alt="Director Profile" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- /Director Section -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+          <div class="d-flex justify-content-center">
+            <div class="d-flex flex-column align-items-center">
+              <h3 class="fw-bold">Key member</h3>
+              <!-- <span>Key Members</span> -->
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              
+              <div class="member-img">
+                <img src="assets/img/person/person-f-8.webp" class="img-fluid" alt="Sarah Johnson" loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Nhat Minh</h4>
+                <span>Team Manager</span>
+                <p>As Team Manager, he leads the team's direction while promoting smooth communication and high-quality creative delivery. He combines flexible thinking with strong execution to maximize results.</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="team-member">
+              
+              <div class="member-img">
+                <img src="assets/img/person/person-m-12.webp" class="img-fluid" alt="Michael Chen" loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Takahiko Nomoto</h4>
+                <span>Chief Technology Officer</span>
+                <p>An experienced leader who guides the organization in pursuing innovation and excellence. He delivers transformative solutions at the intersection of technology and business.</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              
+              <div class="member-img">
+                <img src="assets/img/person/person-f-3.webp" class="img-fluid" alt="Emily Rodriguez" loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Thao Nippon</h4>
+                <span>Creative Director</span>
+                <p>Specializes in visual storytelling to build brand identity. She skillfully integrates the latest design trends to create intuitive and engaging experiences that resonate with users.</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-dribbble"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="350">
+            <div class="team-member">
+              
+              <div class="member-img">
+                <img src="assets/img/person/person-m-7.webp" class="img-fluid" alt="David Thompson" loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Hai Dang</h4>
+                <span>Head of Operations</span>
+                <p>A specialist in building and optimizing efficient business processes. From resource management to improving team performance, he creates a reliable foundation for achieving goals.</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+    
+  <!-- Floating Contact Button -->
+<button id="contactToggleBtn" class="floating-contact-btn">
+  <i class="bi bi-chat-dots-fill"></i>
+</button>
+
+<!-- Contact Popup -->
+<div id="contactPopup" class="contact-popup">
+  <div class="contact-popup-content">
+
+    <!-- Close Button -->
+    <button class="close-popup" id="closePopup">
+      <i class="bi bi-x-lg"></i>
+    </button>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact section light-background">
+
+      <div class="container section-title">
+        <span class="subtitle">Contact Us</span>
+        <h2>Get in Touch</h2>
+        <p>
+          Please feel free to contact us first.<br>
+          We provide free support from clarifying your operational needs to proposing the best plan.
+          You can start with small tasks right away.<br>
+          We will get back to you within 24–48 hours.
+        </p> 
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-12">
+
+            <div class="form-wrapper">
+              <div class="form-header">
+                <h3>Send a Message</h3>
+              </div>
+
+              <form action="form-mail/send_email.php" method="post" class="php-email-form">
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Full Name</label>
+                      <input type="text" name="name" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Email Address</label>
+                      <input type="email" name="email" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Subject</label>
+                  <input type="text" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="projectMessage">Message</label>
+                  <textarea name="message" id="projectMessage" rows="5" required></textarea>
+                </div>
+
+                <!-- Preferred date/time for contact -->
+                <div class="form-group">
+                  <label>Preferred date/time (optional)</label>
+                  <div class="row g-2">
+                    <div class="col-md-5">
+                      <input type="date" id="preferredDate" class="form-control" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="col-md-3">
+                      <select id="preferredHour" class="form-control">
+                        <option value="">Hour</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <select id="preferredMinute" class="form-control">
+                        <option value="00">00</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <select id="preferredPeriod" class="form-control">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <input type="hidden" id="preferredDatetime" name="preferred_datetime">
+                </div>
+
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    We will respond within 24–48 hours.
+                  </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  <span>Send Message</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+       <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center flex-direction-column">
+            <img src="assets/img/logo-removebg-preview.png" alt="WA+CRAFT logo" class="logo-img">
+          </a>
+          <div class="brand-text">
+            <h4 class="mb-0">WA+CRAFT</h4>
+            <p class="tagline mb-0" style="font-size:0.95rem; opacity:0.85;">Harmony Through Craftsmanship</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">BPO Services</a></li>
+            <li><a href="#">Sales Support</a></li>
+            <li><a href="#">AI Utilization Support</a></li>
+            <li><a href="#">Recruitment Support</a></li>
+            <li><a href="#">Data Analysis & Organization</a></li>
+          </ul>
+        </div>
+
+         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact</h4>
+          <p><i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>15 Ngo Thi Si Street, Ngu Hanh Son Ward, Da Nang City, Vietnam</p>
+          <p class="mt-4"><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i><span>+84 91 723 1967 (VN)</span></p>
+          <p class=""><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i><span>+81 70 9103 1967 (JP)</span></p>
+          <p><i class="bi bi-envelope-fill me-2" aria-hidden="true"></i><a href="mailto:nomoto-t@wacraft-jp.com">nomoto-t@wacraft-jp.com</a></p>
+          <p><i class="bi bi-globe me-2" aria-hidden="true"></i>www.wacraft-jp.com</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+   
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+   <!-- Main JS File -->
+  <script>
+    (function(){
+      function pad(n){ return String(n).padStart(2,'0'); }
+      function buildPreferred(){
+        var dateEl = document.getElementById('preferredDate');
+        var hourEl = document.getElementById('preferredHour');
+        var minEl = document.getElementById('preferredMinute');
+        var periodEl = document.getElementById('preferredPeriod');
+        var hidden = document.getElementById('preferredDatetime');
+        if(!hidden) return;
+        var date = dateEl ? dateEl.value : '';
+        var hour = hourEl ? hourEl.value : '';
+        var minute = minEl ? minEl.value : '00';
+        var period = periodEl ? periodEl.value : '';
+        if(!date || !hour){ hidden.value = ''; return; }
+        var h = parseInt(hour, 10);
+        if(period === 'PM' && h < 12) h += 12;
+        if(period === 'AM' && h === 12) h = 0;
+        hidden.value = date + ' ' + pad(h) + ':' + pad(minute || '00');
+      }
+
+      var form = document.querySelector('form.php-email-form');
+      if(form){
+        ['preferredDate','preferredHour','preferredMinute','preferredPeriod'].forEach(function(id){
+          var el = document.getElementById(id);
+          if(el) el.addEventListener('change', buildPreferred);
+        });
+        form.addEventListener('submit', function(e){ buildPreferred(); });
+      }
+    })();
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

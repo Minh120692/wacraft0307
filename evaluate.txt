@@ -1,0 +1,302 @@
+<!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">お客様の声</span>
+        <h2>彼らが語ること</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="testimonial-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 4000
+              },
+              "slidesPerView": 1,
+              "spaceBetween": 30,
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "breakpoints": {
+                "768": {
+                  "slidesPerView": 2
+                },
+                "1200": {
+                  "slidesPerView": 3
+                }
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper">
+
+            <!-- Testimonial Slide 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="testimonial-header">
+                  <img src="assets/img/person/person-f-12.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>業務が一気に軽くなり、営業に集中できるようになりました。</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Jessica Martinez</h5>
+                  <span>東京都・ITスタートアップ</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="testimonial-header">
+                  <img src="assets/img/person/person-m-8.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>海外活用に不安がありましたが、コミュニケーションが非常にスムーズでした。</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>David Rodriguez</h5>
+                  <span>大阪府・製造業</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
+                <div class="testimonial-header">
+                  <img src="assets/img/person/person-f-6.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>本来のミッションに集中できる環境が整いました</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Amanda Wilson</h5>
+                  <span>クリエイティブディレクター</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="500">
+                <div class="testimonial-header">
+                  <img src="assets/img/person/person-m-12.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>スモールスタートできる柔軟さが、私たちの規模に最適でした</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Ryan Thompson</h5>
+                  <span>ビジネスアナリスト</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="600">
+                <div class="testimonial-header">
+                  <img src="assets/img/person/person-f-10.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>AIと人のハイブリッド体制が、圧倒的な工数削減を実現</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Rachel Chen</h5>
+                  <span>プロジェクトマネージャー</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+          </div>
+
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+
+
+
+
+  <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">お問い合わせ</span>
+        <h2>問い合わせ</h2>
+        <p>まずはお気軽にご相談ください。
+業務内容の整理から、最適なプランのご提案まで、無料でサポートいたします。
+小さな業務からでも、すぐに始められます。
+24〜48時間以内に、こちらから折り返しご連絡いたします。
+</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5">
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="bi bi-chat-dots"></i>
+              </div>
+              <div class="info-content">
+                <h4>つながりましょう</h4>
+                <p>あなたのビジョンについて話し合い、一緒にそれを実現する方法を探りましょう。</p>
+              </div>
+            </div>
+
+            <div class="contact-details">
+
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="bi bi-envelope-open"></i>
+                </div>
+                <div class="detail-content">
+                  <span class="detail-label">メールを送る</span>
+                  <span class="detail-value">contact@example.com</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="bi bi-telephone-outbound"></i>
+                </div>
+                <div class="detail-content">
+                  <span class="detail-label">電話する</span>
+                  <span class="detail-value">+1 (555) 432-8976</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="detail-content">
+                  <span class="detail-label">訪問する</span>
+                  <span class="detail-value">547 Madison Avenue<br>New York, NY 10022</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-7">
+            <div class="form-wrapper">
+              <div class="form-header">
+                <h3>メッセージを送る</h3>
+              </div>
+
+              <form action="forms/contact.php" method="post" class="php-email-form">
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>フルネーム</label>
+                      <input type="text" name="name" required="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>メールアドレス</label>
+                      <input type="email" name="email" required="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>件名</label>
+                  <input type="text" name="subject" required="">
+                </div>
+
+                <div class="form-group">
+                  <label for="projectMessage">メッセージ</label>
+                  <textarea name="message" id="projectMessage" rows="5" required=""></textarea>
+                </div>
+
+                <div class="my-3">
+                  <div class="loading">読み込み中</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">メッセージが送信されました。ありがとうございます！</div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  <span>メッセージを送る</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Contact Section -->

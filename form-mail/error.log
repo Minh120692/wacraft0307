@@ -1,0 +1,4 @@
+[2026-05-11 07:40:41] Message could not be sent. Exception: Invalid address:  (From): no-reply@localhost:8888 | Mailer Error: Invalid address:  (From): no-reply@localhost:8888
+[2026-05-11 07:42:58] Message could not be sent. Exception: Invalid address:  (From): no-reply@localhost | Mailer Error: Invalid address:  (From): no-reply@localhost
+[2026-05-11 07:52:16] Message could not be sent. Exception: SMTP Error: Could not authenticate. | Mailer Error: SMTP Error: Could not authenticate.
+[2026-05-11 07:55:00] Message could not be sent. Exception: SMTP Error: Could not authenticate. | Mailer Error: SMTP Error: Could not authenticate.
