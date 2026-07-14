@@ -1,6 +1,7 @@
 import LegacyScripts from "./legacy-scripts";
 import ContactOverlay from "./contact-overlay";
 import SiteHeader from "./site-header";
+import AosController from "./aos-controller";
 
 export default function SitePage({
   locale = "default",
@@ -12,6 +13,7 @@ export default function SitePage({
 }) {
   return (
     <>
+      <AosController />
       <SiteHeader locale={locale} activePage={activePage} />
       <main className="main">
         {intro}

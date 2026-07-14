@@ -47,12 +47,13 @@ export default function LegacyScripts({ idSuffix = "" }) {
           }
 
           if (typeof AOS !== 'undefined') {
-            AOS.init({
-              duration: 600,
-              easing: 'ease-in-out',
-              once: true,
-              mirror: false
-            });
+            if (typeof AOS.refreshHard === 'function') {
+              AOS.refreshHard();
+            } else if (typeof AOS.refresh === 'function') {
+              AOS.refresh();
+            }
+          } else {
+            document.documentElement.classList.add('aos-ready');
           }
 
           if (typeof PureCounter !== 'undefined') {

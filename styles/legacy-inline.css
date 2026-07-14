@@ -84,11 +84,44 @@ button, input, textarea, select {
   pointer-events: none;
 }
 
+#team.section::before,
+.team.section::before {
+  display: none;
+}
+
+#director.section::before,
+.director.section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-image: var(--section-logo-url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.06;
+  filter: saturate(0%) blur(0px);
+  z-index: 0;
+  pointer-events: none;
+}
+
 @media (max-width: 992px) {
   .section::before {
     width: 160px;
     height: 160px;
     opacity: 0.05;
+  }
+
+  #director.section::before,
+  .director.section::before {
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -97,6 +130,14 @@ button, input, textarea, select {
     width: 110px;
     height: 110px;
     opacity: 0.045;
+  }
+
+  #director.section::before,
+  .director.section::before {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
   }
 }
 

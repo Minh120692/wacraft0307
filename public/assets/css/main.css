@@ -4319,3 +4319,10 @@ section,
     opacity: 1;
   }
 }
+
+/* Keep AOS sections visible only until AOS is initialized. */
+html:not(.aos-ready) [data-aos] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
