@@ -211,9 +211,10 @@ sans-serif; */
   line-height: 1;
 }
 
-.logo .logo-img {
-  max-height: 56px; /* header logo height */
-  width: auto;
+.header .logo .logo-img {
+  width: 80px;
+  height: auto;
+  max-height: none;
   display: block;
 }
 .footer-about .logo .logo-img {
@@ -221,14 +222,14 @@ sans-serif; */
   margin-bottom: 20px;
 }
 @media (max-width: 992px) {
-  .logo .logo-img {
-    max-height: 40px;
+  .header .logo .logo-img {
+    width: 80px;
   }
 }
 
 @media (max-width: 576px) {
-  .logo .logo-img {
-    max-height: 34px;
+  .header .logo .logo-img {
+    width: 80px;
   }
 }
 /* .header .logo img {

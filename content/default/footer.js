@@ -5,12 +5,12 @@ export default function FooterSection() {
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
             <a href="/" className="logo d-flex align-items-center flex-direction-column">
-              <img src="/assets/img/logo-removebg-preview.png" alt="WA+CRAFT logo" className="logo-img" />
+              <img src="/assets/img/wacrlogonew.svg" alt="WA+CRAFT logo" className="logo-img" />
             </a>
-            <div className="brand-text">
+            {/* <div className="brand-text">
               <h4 className="mb-0">WA+CRAFT</h4>
               <p className="tagline mb-0" style={{ fontSize: "0.95rem", opacity: 0.85 }}>Harmony Through Craftsmanship</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="col-lg-2 col-6 footer-links">

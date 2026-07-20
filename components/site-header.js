@@ -14,7 +14,7 @@ export default function SiteHeader({ locale = "default", activePage = "home" }) 
       <div className="container-fluid container-xl position-relative">
         <div className="header-shell d-flex align-items-center justify-content-between">
           <Link href={chrome.logoHref} className="logo d-flex align-items-center">
-            <img src="/assets/img/logo-removebg-preview.png" alt="WA+CRAFT logo" className="logo-img" />
+            <img src="/assets/img/wacrlogonew.svg" alt="WA+CRAFT logo" className="logo-img" />
           </Link>
 
           <nav id="navmenu" className="navmenu">
