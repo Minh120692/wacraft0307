@@ -23,18 +23,30 @@ if (empty($name) || !$email || empty($message)) {
 
 $mail = new PHPMailer(true);
 try {
+    $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+    $smtpPort = (int) (getenv('SMTP_PORT') ?: 587);
+    $smtpUser = getenv('SMTP_USER') ?: '';
+    $smtpPass = getenv('SMTP_PASS') ?: '';
+    $fromEmail = getenv('SMTP_FROM_EMAIL') ?: $smtpUser;
+    $fromName = getenv('SMTP_FROM_NAME') ?: 'WA+CRAFT Contact';
+    $toEmail = getenv('CONTACT_TO_EMAIL') ?: 'sunflora92612@gmail.com';
+
+    if (empty($smtpUser) || empty($smtpPass) || empty($fromEmail) || empty($toEmail)) {
+        throw new Exception('Email delivery is not configured.');
+    }
+
     // SMTP configuration
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
+    $mail->Host       = $smtpHost;
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'chaungochuy060302@gmail.com';
-    $mail->Password   = 'vzjxltnpnrrtjxiz'; // ensure this is your valid app password
+    $mail->Username   = $smtpUser;
+    $mail->Password   = $smtpPass;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
+    $mail->Port       = $smtpPort;
 
     // From and recipient
-    $mail->setFrom('chaungochuy060302@gmail.com', 'Huy');
-    $mail->addAddress('chaungochuy0603@gmail.com');
+    $mail->setFrom($fromEmail, $fromName);
+    $mail->addAddress($toEmail);
     $mail->addReplyTo($email, $name);
 
     // Content
