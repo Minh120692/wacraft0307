@@ -1,11 +1,13 @@
-export default function WhyUsSection() {
+export default function WhyUsSection({ showTitle = true }) {
   return (
     <section id="why-us" className="why-us section">
-      <div className="container section-title" data-aos="fade-up">
-        <span className="subtitle">Why Choose Us</span>
-        <h2>Why Choose Us</h2>
-        <p>We are chosen as a partner not just for cost savings but because we blend Japanese-quality communication with cutting-edge technology to create an advantageous back office for your business.</p>
-      </div>
+      {showTitle && (
+        <div className="container section-title" data-aos="fade-up">
+          <span className="subtitle">Why Choose Us</span>
+          <h2>Why Choose Us</h2>
+          <p>We are chosen as a partner not just for cost savings but because we blend Japanese-quality communication with cutting-edge technology to create an advantageous back office for your business.</p>
+        </div>
+      )}
 
       <div className="container" data-aos="fade-up" data-aos-delay="100">
         <div className="row">

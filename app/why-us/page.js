@@ -27,7 +27,7 @@ export default function WhyUsPage() {
       footer={<Footer />}
       scriptSuffix="-why-us"
     >
-      <WhyUs />
+      <WhyUs showTitle={false} />
     </SitePage>
   );
 }

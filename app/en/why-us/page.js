@@ -27,7 +27,7 @@ export default function EnglishWhyUsPage() {
       footer={<Footer />}
       scriptSuffix="-en-why-us"
     >
-      <WhyUs />
+      <WhyUs showTitle={false} />
     </SitePage>
   );
 }
