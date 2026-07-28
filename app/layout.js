@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&family=Kosugi+Maru&family=M+PLUS+1p:wght@300;400;500;700&family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Shippori+Mincho:wght@400;700&family=Sawarabi+Mincho&family=Zen+Maru+Gothic&family=Zen+Kaku+Gothic+New&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&family=Kosugi+Maru&family=M+PLUS+1p:wght@300;400;500;700&family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Shippori+Mincho:wght@400;700&family=Sawarabi+Mincho&family=Zen+Maru+Gothic:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap"
         />
         <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" />
