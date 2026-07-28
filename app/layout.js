@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/assets/img/favicon.svg?v=20260728" type="image/svg+xml" />
         <link rel="alternate icon" href="/assets/img/favicon1.jpg" />
         <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/vendor/aos/aos.css" />
         <link rel="stylesheet" href="/assets/vendor/glightbox/css/glightbox.min.css" />
         <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="/assets/css/main.css?v=20260702-1" />
+        <link rel="stylesheet" href="/assets/css/main.css?v=20260728" />
       </head>
       <body className="index-page" suppressHydrationWarning>{children}</body>
     </html>

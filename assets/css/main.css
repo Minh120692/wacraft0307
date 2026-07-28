@@ -212,7 +212,7 @@ sans-serif; */
 }
 
 .header .logo .logo-img {
-  width: 80px;
+  width: 115px;
   height: auto;
   max-height: none;
   display: block;
@@ -223,13 +223,13 @@ sans-serif; */
 }
 @media (max-width: 992px) {
   .header .logo .logo-img {
-    width: 80px;
+    width: 95px;
   }
 }
 
 @media (max-width: 576px) {
   .header .logo .logo-img {
-    width: 80px;
+    width: 95px;
   }
 }
 /* .header .logo img {
