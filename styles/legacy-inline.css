@@ -13,7 +13,7 @@
   --meiryo-font: "Meiryo", "Yu Gothic", "Noto Sans JP", sans-serif;
   --mono-font: "SFMono-Regular", "Noto Sans Mono", Menlo, Monaco, "Courier New", monospace;
   --condensed-font: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
-  --section-logo-url: url("/assets/img/logo.jpg");
+  --section-logo-url: url("/assets/img/logo-mark.svg");
 }
 
 body,

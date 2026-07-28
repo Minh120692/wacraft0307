@@ -5,7 +5,7 @@ export default function FooterSection() {
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
             <a href="/" className="logo d-flex align-items-center flex-direction-column">
-              <img src="/assets/img/logo-light.svg" alt="WA+CRAFT logo" className="logo-img" />
+              <img src="/assets/img/logo.svg" alt="WA+CRAFT logo" className="logo-img" />
             </a>
             {/* <div className="brand-text">
               <h4 className="mb-0">WA+CRAFT</h4>
