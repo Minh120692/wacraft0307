@@ -12,7 +12,7 @@ export default function HeroSection() {
                 中小企業、スタートアップ企業を支える、柔軟で拡張性の高いサービスを提供します。
               </p>
               <div className="hero-cta">
-                <a href="/about" className="btn-primary">まずは相談する</a>
+                <a href="https://bpo-offshore.com/" className="btn-primary" target="_blank" rel="noopener noreferrer">まずは相談する</a>
               </div>
             </div>
           </div>
