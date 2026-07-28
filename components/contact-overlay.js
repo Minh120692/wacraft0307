@@ -17,7 +17,7 @@ const copy = {
     email: "メールアドレス",
     subject: "件名",
     message: "メッセージ",
-    preferred: "ご都合の良い日時（任意）",
+    preferred: "面談ご希望日時 (任意)",
     loading: "読み込み中",
     sent: "24時間から48時間以内にご連絡いたします。",
     submit: "メッセージを送る",
