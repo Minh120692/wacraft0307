@@ -8,8 +8,6 @@ const copy = {
     subtitle: "Contact Us",
     description: [
       "まずはお気軽にご相談ください。",
-      "業務内容の整理から、最適なプランのご提案まで、無料でサポートいたします。",
-      "小さな業務からでも、すぐに始められます。",
       "48時間以内に、こちらから折り返しご連絡いたします。",
     ],
     formTitle: "メッセージを送る",
@@ -27,8 +25,6 @@ const copy = {
     subtitle: "Contact Us",
     description: [
       "Please feel free to contact us first.",
-      "We provide free support from clarifying your operational needs to proposing the best plan.",
-      "You can start with small tasks right away.",
       "We will get back to you within 48 hours.",
     ],
     formTitle: "Send a Message",
