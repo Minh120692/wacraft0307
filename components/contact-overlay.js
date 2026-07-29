@@ -101,10 +101,12 @@ export default function ContactOverlay({ locale = "default" }) {
               <span className="subtitle">{t.subtitle}</span>
               <h2>{t.title}</h2>
               <p>
-                {t.description[0]}<br />
-                {t.description[1]}<br />
-                {t.description[2]}<br />
-                {t.description[3]}
+                {t.description.map((line, index) => (
+                  <span key={line}>
+                    {index > 0 && <br />}
+                    {line}
+                  </span>
+                ))}
               </p>
             </div>
 
