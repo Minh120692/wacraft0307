@@ -5,8 +5,8 @@ function navClass(href, activeHref) {
   return href === activeHref ? "active" : undefined;
 }
 
-export default function SiteHeader({ locale = "default", activePage = "home" }) {
-  const chrome = getPageChrome(locale);
+export default function SiteHeader({ locale = "default", activePage = "home", langHref = null }) {
+  const chrome = getPageChrome(locale, activePage, langHref);
   const activeHref = chrome[`${activePage}Href`] ?? chrome.homeHref;
 
   return (
@@ -24,6 +24,7 @@ export default function SiteHeader({ locale = "default", activePage = "home" }) 
               <li><Link href={chrome.solutionsHref} className={navClass(chrome.solutionsHref, activeHref)}>Our Solutions</Link></li>
               <li><Link href={chrome.whyUsHref} className={navClass(chrome.whyUsHref, activeHref)}>Why Choose Us</Link></li>
               <li><Link href={chrome.teamHref} className={navClass(chrome.teamHref, activeHref)}>Team</Link></li>
+              <li><Link href={chrome.blogHref} className={navClass(chrome.blogHref, activeHref)}>Blog</Link></li>
               <li><a href="#contact" data-contact-trigger="true">Contact</a></li>
               <li><Link href={chrome.langHref} className="lang-switch">{chrome.langLabel}</Link></li>
             </ul>

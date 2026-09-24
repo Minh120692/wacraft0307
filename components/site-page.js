@@ -10,11 +10,12 @@ export default function SitePage({
   children,
   footer = null,
   scriptSuffix = "",
+  langHref = null,
 }) {
   return (
     <>
       <AosController />
-      <SiteHeader locale={locale} activePage={activePage} />
+      <SiteHeader locale={locale} activePage={activePage} langHref={langHref} />
       <main className="main">
         {intro}
         {children}

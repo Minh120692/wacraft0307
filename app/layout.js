@@ -1,8 +1,20 @@
 import "../styles/legacy-inline.css";
+import { SITE_URL } from "../lib/site-url";
+
+const SITE_DESCRIPTION =
+  "WA+CRAFT pairs AI with a bilingual BPO team to run e-commerce operations, SEO and social marketing, short-form video production and lead generation \u2014 lower cost, higher throughput, measured every week.";
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "WA+CRAFT",
-  description: "AI x BPO service website migrated to Next.js.",
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    siteName: "WA+CRAFT",
+    title: "WA+CRAFT",
+    description: SITE_DESCRIPTION,
+    url: "/",
+  },
 };
 
 export default function RootLayout({ children }) {
