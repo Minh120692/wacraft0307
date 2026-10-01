@@ -18,7 +18,7 @@ export default function TeamSection() {
               <div className="director-content">
                 <div className="director-info mt-4">
                   <h4>Takahiko Nomoto</h4>
-                  <p className="text-muted">野本 隆彦 – 最高技術責任者（CEO）</p>
+                  <p className="text-muted">野本 隆彦 – 最高経営責任者</p>
                   <p>経験豊富なリーダーとして、イノベーションと卓越性の追求を組織に導いています。テクノロジーとビジネスの交点で、変革的なソリューションを実現しています。</p>
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default function TeamSection() {
               </div>
               <div className="member-info">
                 <h4>Takahiko Nomoto</h4>
-                <span>最高技術責任者</span>
+                <span>最高経営責任者</span>
                 <p>経験豊富なリーダーとして、イノベーションと卓越性の追求を組織に導いています。テクノロジーとビジネスの交点で、変革的なソリューションを実現しています。</p>
                 <div className="social">
                   <a href="#"><i className="bi bi-twitter-x"></i></a>

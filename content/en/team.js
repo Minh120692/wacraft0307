@@ -18,7 +18,7 @@ export default function TeamSection() {
               <div className="director-content">
                 <div className="director-info mt-4">
                   <h4>Takahiko Nomoto</h4>
-                  <p className="text-muted">Takahiko Nomoto - Chief Technology Officer (CEO)</p>
+                  <p className="text-muted">Takahiko Nomoto - Chief Executive Officer</p>
                   <p>As an experienced leader, I guide organizations toward innovation and the pursuit of excellence. I deliver transformative solutions at the intersection of technology and business.</p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function TeamSection() {
               </div>
               <div className="member-info">
                 <h4>Takahiko Nomoto</h4>
-                <span>Chief Technology Officer</span>
+                <span>Chief Executive Officer</span>
                 <p>An experienced leader who guides the organization in pursuing innovation and excellence. He delivers transformative solutions at the intersection of technology and business.</p>
                 <div className="social">
                   <a href="#"><i className="bi bi-twitter-x"></i></a>
