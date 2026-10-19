@@ -42,15 +42,29 @@ YAML front-matter delimited by `---`, at the very top of the file.
 | Field | Type | Required | Notes |
 |-------|------|----------|-------|
 | `title` | string | **yes** | Used as `<h1>`, `<title>` (suffixed with ` \| WA+CRAFT`), Open Graph title and JSON-LD `headline`. Quote it if it contains `:` or `#`. |
-| `date` | date (`YYYY-MM-DD`) | **yes** | Publication date. Drives ordering (newest first), `datePublished` and sitemap `lastmod`. Must parse as a date. |
+| `date` | date (`YYYY-MM-DD`) | **yes** | Publication date. Drives ordering (newest first), `datePublished` and sitemap `lastmod`. Must parse as a date. `publishedDate` is accepted in its place. |
 | `description` | string | **yes** | One or two sentences. Used as the meta description, the card summary and the Open Graph description. Keep it under ~160 characters. |
-| `published` | boolean (`true` / `false`) | **yes** | Must be a real YAML boolean, not the string `"true"`. `false` keeps the file in the repo but excludes it from the index, the generated routes and the sitemap. |
+| `published` | boolean (`true` / `false`) | no | Defaults to `true` when the key is absent. When present it must be a real YAML boolean, not the string `"true"` and not empty. `false` keeps the file in the repo but excludes it from the index, the generated routes and the sitemap. |
 | `image` | string | no | Site-relative path to a hero / social image, e.g. `/assets/img/japan1.png`. Turned into an absolute URL for Open Graph and JSON-LD. Omit it and the post renders without an image. |
 | `author` | string | no | Defaults to `WA+CRAFT` in JSON-LD. |
-| `updated` | date | no | Last-modified date. Defaults to `date`. Must parse as a date when present. |
+| `updated` | date | no | Last-modified date. Defaults to `date`. Must parse as a date when present. `updatedDate` is accepted in its place. |
 | `tags` | list of strings | no | Currently metadata only; not rendered. |
 
 Unknown fields are ignored, so extra keys are safe to emit.
+
+### Files written by seo-cockpit
+
+The `seo-cockpit` publisher (`~/Projects/auto_workflow/seo-cockpit`, `cockpit/lib/frontmatter.ts`)
+writes one front-matter format for every site it publishes to. That format is accepted as is:
+
+- `publishedDate` / `updatedDate` stand in for `date` / `updated`. When a file has both spellings,
+  `date` and `updated` win.
+- It never writes `published`; the file exists only because it was published, so the default
+  `true` applies.
+- Its `excerpt`, `category`, `subcategory` and `imageAlt` are unknown fields here and are ignored.
+- Images go to `public/img/blog/<slug>/` and `image` holds `/img/blog/<slug>/<file>`.
+
+Renaming any of these keys on either side breaks publishing, so change both repos together.
 
 ## Template
 
@@ -93,11 +107,11 @@ Images in the body use ordinary Markdown with site-relative paths, e.g.
 
 The build throws — it does not skip the post — when any of these hold:
 
-1. `title`, `date`, `description` or `published` is missing, `null`, an empty string, or a string of
-   only whitespace. (`title` and `description` are trimmed before use.)
+1. `title`, `date` (or `publishedDate`) or `description` is missing, `null`, an empty string, or a
+   string of only whitespace. (`title` and `description` are trimmed before use.)
 2. `title` or `description` is not a string.
-3. `published` is not a boolean.
-4. `date` (or `updated`, when present) does not parse as a date.
+3. `published` is present but is not a boolean (an empty `published:` counts as not a boolean).
+4. `date` / `publishedDate` (or `updated` / `updatedDate`, when present) does not parse as a date.
 5. `image` is present but is not a string.
 6. `tags` is present but is not a list.
 7. Two files in the same locale directory resolve to the same slug.
