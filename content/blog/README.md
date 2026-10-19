@@ -45,7 +45,9 @@ YAML front-matter delimited by `---`, at the very top of the file.
 | `date` | date (`YYYY-MM-DD`) | **yes** | Publication date. Drives ordering (newest first), `datePublished` and sitemap `lastmod`. Must parse as a date. `publishedDate` is accepted in its place. |
 | `description` | string | **yes** | One or two sentences. Used as the meta description, the card summary and the Open Graph description. Keep it under ~160 characters. |
 | `published` | boolean (`true` / `false`) | no | Defaults to `true` when the key is absent. When present it must be a real YAML boolean, not the string `"true"` and not empty. `false` keeps the file in the repo but excludes it from the index, the generated routes and the sitemap. |
-| `image` | string | no | Site-relative path to a hero / social image, e.g. `/assets/img/japan1.png`. Turned into an absolute URL for Open Graph and JSON-LD. Omit it and the post renders without an image. |
+| `image` | string | no | Site-relative path to a hero / social image, e.g. `/assets/img/japan1.png`. Shown above the body cropped to 16:9, and turned into an absolute URL for Open Graph and JSON-LD. Omit it and the post renders without an image. |
+| `imageAlt` | string | no | Alt text of the hero image. Defaults to the `title`. |
+| `subcategory` | string | no | Shown as a badge above the title, and counts as a topic when picking 関連記事 (like a tag). |
 | `author` | string | no | Defaults to `WA+CRAFT` in JSON-LD. |
 | `updated` | date | no | Last-modified date. Defaults to `date`. Must parse as a date when present. `updatedDate` is accepted in its place. |
 | `tags` | list of strings | no | Not rendered on the post. A tag equal to a service key (`ec`, `bpo`, `marketing`, `video`, `sales`), compared case-insensitively, lists the post under that service's 関連ブログ (related posts) on the solutions page (`/solutions/#<key>`), newest first, up to three. Other tags are metadata only. |
@@ -61,7 +63,8 @@ writes one front-matter format for every site it publishes to. That format is ac
   `date` and `updated` win.
 - It never writes `published`; the file exists only because it was published, so the default
   `true` applies.
-- Its `excerpt`, `category`, `subcategory` and `imageAlt` are unknown fields here and are ignored.
+- Its `subcategory` and `imageAlt` are used as described above; its `excerpt` and `category` are
+  unknown fields here and are ignored.
 - Images go to `public/img/blog/<slug>/` and `image` holds `/img/blog/<slug>/<file>`.
 
 Renaming any of these keys on either side breaks publishing, so change both repos together.
@@ -101,7 +104,23 @@ the `title` as a top-level `#` heading: the page already renders it as the `<h1>
 sections at `##`.
 
 Images in the body use ordinary Markdown with site-relative paths, e.g.
-`![alt text](/assets/img/japan1.png)`.
+`![alt text](/assets/img/japan1.png)`. The build reads each local image's size from `public/` and
+adds `width`, `height` and `loading="lazy"`; images scale down to the reading column.
+
+### Headings and the table of contents
+
+The page builds the 目次 itself from the body's `##` and `###` headings, so the body must **not**
+contain its own table of contents. Each heading gets an id built like GitHub's (lowercased,
+punctuation dropped, spaces to hyphens), e.g. `## 特定電子メールの定義` → `#特定電子メールの定義`.
+
+Headings are numbered `1.`, `1-1.`, … on the page and in the 目次, unless an `##` heading already
+starts with its own number (`## 1. …`, `## 2.1 …`, `### STEP1：…`): then the post keeps its own
+numbering and none is added. A post with fewer than two headings shows no 目次.
+
+The page also adds, around the body: the breadcrumb (TOP › ブログ › title, with `BreadcrumbList`
+JSON-LD), the publication and update dates, a WA+CRAFT box with the contact and services links, and
+up to three 関連記事 (posts sharing the most tags or subcategory, then the newest). None of these
+belong in the Markdown.
 
 ## Validation rules that fail the build
 
