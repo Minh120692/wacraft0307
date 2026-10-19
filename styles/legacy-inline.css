@@ -189,3 +189,19 @@ button, input, textarea, select {
 #hero .hero-content h1 {
   font-size: clamp(1.75rem, 3.8vw, 3.25rem);
 }
+
+/* Team cards show initials until real photos are supplied: a square that keeps the
+   card's padded frame and hover tint from `.member-img`. */
+.team .team-member .member-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}

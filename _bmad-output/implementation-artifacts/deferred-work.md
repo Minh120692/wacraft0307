@@ -68,3 +68,9 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-marketing-page-seo.md`
   summary: Carry seo-cockpit's `imageAlt` into post Open Graph images (og:image:alt), updating content/blog/README.md and the cockpit contract together.
   evidence: cockpit/lib/frontmatter.ts writes `imageAlt`, but lib/blog.js ignores unknown keys and postMetadata emits `images: [{ url }]` only. The marketing-page SEO spec forbade front-matter contract changes.
+- source_spec: `_bmad-output/implementation-artifacts/spec-team-initials-avatars.md`
+  summary: Confirm the team members' pronouns with the client, or rewrite the four EN bios in content/en/team.js without pronouns as the JA bios are.
+  evidence: The EN bios say "he"/"she" (e.g. "As Team Manager, he leads…" for Nhat Minh, whose old stock photo was a woman's), while the JA bios use none. With the photos gone, these pronouns are the page's only gender claim, and nobody has confirmed them. The initials-avatar spec kept the bios word for word.
+- source_spec: `_bmad-output/implementation-artifacts/spec-team-initials-avatars.md`
+  summary: Show the representative one way on /about/: the 代表挨拶 placeholder (logo mark) and the team card ("TN" initials) differ, and the JA team card names him "Takahiko Nomoto" while the message and company table say 野本 享彦.
+  evidence: Pre-existing from the content refresh (logo placeholder) and the original team markup (romanized name). It becomes visible once the stock photo is gone, since both placeholders sit on the same page.

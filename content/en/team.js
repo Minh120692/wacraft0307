@@ -1,3 +1,36 @@
+const MEMBERS = [
+  {
+    name: "Nhat Minh",
+    title: "Team Manager",
+    bio: "As Team Manager, he leads the team's direction while promoting smooth communication and high-quality creative delivery. He combines flexible thinking with strong execution to maximize results.",
+  },
+  {
+    name: "Takahiko Nomoto",
+    title: "Chief Executive Officer",
+    bio: "An experienced leader who guides the organization in pursuing innovation and excellence. He delivers transformative solutions at the intersection of technology and business.",
+  },
+  {
+    name: "Thao Nippon",
+    title: "Creative Director",
+    bio: "Specializes in visual storytelling to build brand identity. She skillfully integrates the latest design trends to create intuitive and engaging experiences that resonate with users.",
+  },
+  {
+    name: "Hai Dang",
+    title: "Head of Operations",
+    bio: "A specialist in building and optimizing efficient business processes. From resource management to improving team performance, he creates a reliable foundation for achieving goals.",
+  },
+];
+
+/** "Nhat Minh" -> "NM": the first letter of the first two words of a name. */
+function initials(name) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0].toUpperCase())
+    .join("");
+}
+
 export default function TeamSection() {
   return (
     <section id="team" className="team section light-background">
@@ -19,77 +52,21 @@ export default function TeamSection() {
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-6">
-            <div className="team-member">
-              <div className="member-img">
-                <img src="/assets/img/person/person-f-8.webp" className="img-fluid" alt="Nhat Minh" loading="lazy" />
-              </div>
-              <div className="member-info">
-                <h4>Nhat Minh</h4>
-                <span>Team Manager</span>
-                <p>As Team Manager, he leads the team&apos;s direction while promoting smooth communication and high-quality creative delivery. He combines flexible thinking with strong execution to maximize results.</p>
-                <div className="social">
-                  <a href="#"><i className="bi bi-twitter-x"></i></a>
-                  <a href="#"><i className="bi bi-linkedin"></i></a>
-                  <a href="#"><i className="bi bi-instagram"></i></a>
+          {MEMBERS.map((member) => (
+            <div className="col-lg-3 col-md-6" key={member.name}>
+              <div className="team-member">
+                {/* Initials until real photos of the members are supplied; no stock faces. */}
+                <div className="member-img">
+                  <div className="member-initials" aria-hidden="true">{initials(member.name)}</div>
+                </div>
+                <div className="member-info">
+                  <h4>{member.name}</h4>
+                  <span>{member.title}</span>
+                  <p>{member.bio}</p>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6">
-            <div className="team-member">
-              <div className="member-img">
-                <img src="/assets/img/person/person-m-12.webp" className="img-fluid" alt="Takahiko Nomoto" loading="lazy" />
-              </div>
-              <div className="member-info">
-                <h4>Takahiko Nomoto</h4>
-                <span>Chief Executive Officer</span>
-                <p>An experienced leader who guides the organization in pursuing innovation and excellence. He delivers transformative solutions at the intersection of technology and business.</p>
-                <div className="social">
-                  <a href="#"><i className="bi bi-twitter-x"></i></a>
-                  <a href="#"><i className="bi bi-linkedin"></i></a>
-                  <a href="#"><i className="bi bi-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6">
-            <div className="team-member">
-              <div className="member-img">
-                <img src="/assets/img/person/person-f-3.webp" className="img-fluid" alt="Thao Nippon" loading="lazy" />
-              </div>
-              <div className="member-info">
-                <h4>Thao Nippon</h4>
-                <span>Creative Director</span>
-                <p>Specializes in visual storytelling to build brand identity. She skillfully integrates the latest design trends to create intuitive and engaging experiences that resonate with users.</p>
-                <div className="social">
-                  <a href="#"><i className="bi bi-twitter-x"></i></a>
-                  <a href="#"><i className="bi bi-linkedin"></i></a>
-                  <a href="#"><i className="bi bi-dribbble"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6">
-            <div className="team-member">
-              <div className="member-img">
-                <img src="/assets/img/person/person-m-7.webp" className="img-fluid" alt="Hai Dang" loading="lazy" />
-              </div>
-              <div className="member-info">
-                <h4>Hai Dang</h4>
-                <span>Head of Operations</span>
-                <p>A specialist in building and optimizing efficient business processes. From resource management to improving team performance, he creates a reliable foundation for achieving goals.</p>
-                <div className="social">
-                  <a href="#"><i className="bi bi-twitter-x"></i></a>
-                  <a href="#"><i className="bi bi-linkedin"></i></a>
-                  <a href="#"><i className="bi bi-facebook"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
