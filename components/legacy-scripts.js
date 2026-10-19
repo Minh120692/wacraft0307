@@ -4,7 +4,6 @@ export default function LegacyScripts({ idSuffix = "" }) {
   return (
     <>
       <Script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
-      <Script src="/assets/vendor/php-email-form/validate.js" strategy="afterInteractive" />
       <Script src="/assets/vendor/aos/aos.js" strategy="afterInteractive" />
       <Script id={`site-init${idSuffix}`} strategy="afterInteractive">
         {`(function () {
@@ -53,36 +52,6 @@ export default function LegacyScripts({ idSuffix = "" }) {
             }
           } else {
             document.documentElement.classList.add('aos-ready');
-          }
-        })();`}
-      </Script>
-      <Script id={`preferred-datetime${idSuffix}`} strategy="afterInteractive">
-        {`(function(){
-          function pad(n){ return String(n).padStart(2,'0'); }
-          function buildPreferred(){
-            var dateEl = document.getElementById('preferredDate');
-            var hourEl = document.getElementById('preferredHour');
-            var minEl = document.getElementById('preferredMinute');
-            var periodEl = document.getElementById('preferredPeriod');
-            var hidden = document.getElementById('preferredDatetime');
-            if(!hidden) return;
-            var date = dateEl ? dateEl.value : '';
-            var hour = hourEl ? hourEl.value : '';
-            var minute = minEl ? minEl.value : '00';
-            var period = periodEl ? periodEl.value : '';
-            if(!date || !hour){ hidden.value = ''; return; }
-            var h = parseInt(hour, 10);
-            if(period === 'PM' && h < 12) h += 12;
-            if(period === 'AM' && h === 12) h = 0;
-            hidden.value = date + ' ' + pad(h) + ':' + pad(minute || '00');
-          }
-          var form = document.querySelector('form.php-email-form');
-          if(form){
-            ['preferredDate','preferredHour','preferredMinute','preferredPeriod'].forEach(function(id){
-              var el = document.getElementById(id);
-              if(el) el.addEventListener('change', buildPreferred);
-            });
-            form.addEventListener('submit', function(){ buildPreferred(); });
           }
         })();`}
       </Script>

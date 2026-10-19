@@ -74,3 +74,18 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-team-initials-avatars.md`
   summary: Show the representative one way on /about/: the 代表挨拶 placeholder (logo mark) and the team card ("TN" initials) differ, and the JA team card names him "Takahiko Nomoto" while the message and company table say 野本 享彦.
   evidence: Pre-existing from the content refresh (logo placeholder) and the original team markup (romanized name). It becomes visible once the stock photo is gone, since both placeholders sit on the same page.
+- source_spec: `_bmad-output/implementation-artifacts/spec-contact-form-web3forms.md`
+  summary: Exercise the contact overlay in a render harness: the keyless branch, form reset only on sent, the disabled button while sending, and `locale` reaching the payload.
+  evidence: Mutation testing on 2026-10-19 showed that inverting `!ACCESS_KEY`, resetting on error, or dropping `disabled` all keep `npm test` green. These were checked once in headless Chrome only. Compiling JSX through Next's bundled SWC with `react-dom/server` works without new dependencies, but it relies on a private Next API. Same gap as the render harnesses deferred from the content refresh and the page SEO work.
+- source_spec: `_bmad-output/implementation-artifacts/spec-contact-form-web3forms.md`
+  summary: Confirm that no password or identity manager fills the hidden text honeypot `botcheck`, or switch it to Web3Forms' recommended hidden checkbox.
+  evidence: Unverified, medium if true. A filled honeypot makes the form show "sent" without sending or logging anything, so a real inquiry would vanish without a trace. Chrome autofill does not classify the field; third-party managers were not tested.
+- source_spec: `_bmad-output/implementation-artifacts/spec-contact-form-web3forms.md`
+  summary: Decide whether the contact form needs a privacy notice or consent line now that name, email and message go to Web3Forms, an overseas processor.
+  evidence: Unverified, medium if true. Whether APPI's rules on providing data abroad apply to this entrustment is a legal question for the client. The Next site has no privacy page; only the legacy `privacy.html` exists.
+- source_spec: `_bmad-output/implementation-artifacts/spec-contact-form-web3forms.md`
+  summary: State the time zone of the preferred meeting time (label or payload), because EN visitors abroad will enter local time.
+  evidence: Pre-existing. The old hidden field and the nodemailer route also sent a zone-less "YYYY-MM-DD HH:MM". Which zone the team schedules in (JST or ICT) is the client's call.
+- source_spec: `_bmad-output/implementation-artifacts/spec-contact-form-web3forms.md`
+  summary: Make the contact form controls accessible and fully localized: link each label to its control, name the four date and time controls, translate the "Hour" placeholder for JA, and drop the no-op `placeholder` on `type="date"`.
+  evidence: Pre-existing markup that the Web3Forms change only re-indented. Only the message textarea has a linked label.
