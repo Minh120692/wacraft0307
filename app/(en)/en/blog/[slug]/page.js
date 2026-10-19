@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import SitePage from "../../../../components/site-page";
-import ArticleJsonLd from "../../../../components/article-json-ld";
-import { formatPostDate } from "../../../../components/blog-post-card";
-import enSections from "../../../../content/en/index.js";
-import { alternatePaths, getPost, getPosts } from "../../../../lib/blog";
-import { blogPostHref, routeFor } from "../../../../lib/site-content";
-import { absoluteUrl, absoluteAsset } from "../../../../lib/site-url";
+import SitePage from "../../../../../components/site-page";
+import ArticleJsonLd from "../../../../../components/article-json-ld";
+import { formatPostDate } from "../../../../../components/blog-post-card";
+import enSections from "../../../../../content/en/index.js";
+import { alternatePaths, getPost, getPosts } from "../../../../../lib/blog";
+import { postMetadata } from "../../../../../lib/seo";
+import { routeFor } from "../../../../../lib/site-content";
 
 const LOCALE = "en";
 const EMPTY_SLUG = "__no-posts";
@@ -23,31 +23,9 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const post = getPost(LOCALE, slug);
-  // The reserved empty-locale slug exports as Next's 404 page; keep it out of the index.
-  if (!post) return { title: "Not found | WA+CRAFT", robots: { index: false, follow: false } };
-
-  const canonical = absoluteUrl(blogPostHref(LOCALE, slug));
-  const languages = Object.fromEntries(
-    Object.entries(alternatePaths(slug)).map(([lang, path]) => [lang, absoluteUrl(path)])
-  );
-
-  return {
-    title: `${post.title} | WA+CRAFT`,
-    description: post.description,
-    alternates: { canonical, languages },
-    openGraph: {
-      type: "article",
-      siteName: "WA+CRAFT",
-      locale: "en_US",
-      title: post.title,
-      description: post.description,
-      url: canonical,
-      publishedTime: post.date,
-      modifiedTime: post.updated ?? post.date,
-      ...(post.image ? { images: [{ url: absoluteAsset(post.image) }] } : {}),
-    },
-  };
+  // The reserved empty-locale slug exports as Next's 404 page; postMetadata keeps it
+  // out of the index.
+  return postMetadata(LOCALE, slug);
 }
 
 export default async function EnglishBlogPostPage({ params }) {

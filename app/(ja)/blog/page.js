@@ -1,34 +1,11 @@
-import SitePage from "../../components/site-page";
-import BlogPostCard from "../../components/blog-post-card";
-import defaultSections from "../../content/default/index.js";
-import { getPosts } from "../../lib/blog";
-import { routeFor } from "../../lib/site-content";
-import { absoluteUrl } from "../../lib/site-url";
+import SitePage from "../../../components/site-page";
+import BlogPostCard from "../../../components/blog-post-card";
+import defaultSections from "../../../content/default/index.js";
+import { getPosts } from "../../../lib/blog";
+import { pageMetadata } from "../../../lib/seo";
 
 const LOCALE = "default";
-const TITLE = "ブログ | WA+CRAFT";
-const DESCRIPTION =
-  "AI×BPOの運用設計、EC運営、SEO・SNSマーケティングに関するWA+CRAFTの記事一覧です。";
-
-export const metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: {
-    canonical: absoluteUrl(routeFor("blog", LOCALE)),
-    languages: {
-      ja: absoluteUrl(routeFor("blog", "default")),
-      en: absoluteUrl(routeFor("blog", "en")),
-    },
-  },
-  openGraph: {
-    type: "website",
-    siteName: "WA+CRAFT",
-    locale: "ja_JP",
-    title: TITLE,
-    description: DESCRIPTION,
-    url: absoluteUrl(routeFor("blog", LOCALE)),
-  },
-};
+export const metadata = pageMetadata("blog", LOCALE);
 
 function BlogIntro() {
   return (

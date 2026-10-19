@@ -1,34 +1,11 @@
-import SitePage from "../../../components/site-page";
-import BlogPostCard from "../../../components/blog-post-card";
-import enSections from "../../../content/en/index.js";
-import { getPosts } from "../../../lib/blog";
-import { routeFor } from "../../../lib/site-content";
-import { absoluteUrl } from "../../../lib/site-url";
+import SitePage from "../../../../components/site-page";
+import BlogPostCard from "../../../../components/blog-post-card";
+import enSections from "../../../../content/en/index.js";
+import { getPosts } from "../../../../lib/blog";
+import { pageMetadata } from "../../../../lib/seo";
 
 const LOCALE = "en";
-const TITLE = "Blog | WA+CRAFT";
-const DESCRIPTION =
-  "Articles from WA+CRAFT on AI-assisted BPO operations, e-commerce, SEO and social marketing.";
-
-export const metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: {
-    canonical: absoluteUrl(routeFor("blog", LOCALE)),
-    languages: {
-      ja: absoluteUrl(routeFor("blog", "default")),
-      en: absoluteUrl(routeFor("blog", "en")),
-    },
-  },
-  openGraph: {
-    type: "website",
-    siteName: "WA+CRAFT",
-    locale: "en_US",
-    title: TITLE,
-    description: DESCRIPTION,
-    url: absoluteUrl(routeFor("blog", LOCALE)),
-  },
-};
+export const metadata = pageMetadata("blog", LOCALE);
 
 function BlogIntro() {
   return (

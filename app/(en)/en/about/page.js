@@ -1,5 +1,8 @@
-import SitePage from "../../../components/site-page";
-import enSections from "../../../content/en/index.js";
+import SitePage from "../../../../components/site-page";
+import enSections from "../../../../content/en/index.js";
+import { pageMetadata } from "../../../../lib/seo";
+
+export const metadata = pageMetadata("about", "en");
 
 function AboutIntro() {
   return (

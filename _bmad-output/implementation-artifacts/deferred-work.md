@@ -53,3 +53,18 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-site-content-refresh.md`
   summary: Remove or fill the 12 dead href="#" social icons on the team cards, now shown on /about/.
   evidence: Pre-existing markup in content/{default,en}/team.js, previously on /team/ and the homepage. Best handled with the deferred team-photo replacement.
+- source_spec: `_bmad-output/implementation-artifacts/spec-marketing-page-seo.md`
+  summary: Drop the duplicate charset and viewport meta tags every page emits (Next adds its own, and the shared head adds a second pair with initial-scale=1.0).
+  evidence: Pre-existing. Live wacraft-jp.com shows two `<meta charSet>` and two viewport tags today. The per-locale layout split only moved them into components/site-head.js. The fix is deleting the two tags there, or declaring `export const viewport`.
+- source_spec: `_bmad-output/implementation-artifacts/spec-marketing-page-seo.md`
+  summary: Give the 404 page a way back: a bilingual message with links to / and /en/.
+  evidence: Pre-existing. Next's built-in 404, which shipped before and which app/global-not-found.js reproduces, has no header, navigation or links. One static 404.html serves both locales.
+- source_spec: `_bmad-output/implementation-artifacts/spec-marketing-page-seo.md`
+  summary: Cover page-level SEO in the render/build-output harness: each page's pageMetadata arguments, <html lang>, homepage-only Organization/WebSite JSON-LD, and the 404 that depends on the experimental globalNotFound flag.
+  evidence: Review findings 12 and 13. The builders are unit-tested, but which key and locale each JSX page passes, where SiteJsonLd renders, and whether Next honours globalNotFound are observable only in the built out/. They were checked by one-off commands on 2026-10-19. Belongs with the render harness entry already in this file.
+- source_spec: `_bmad-output/implementation-artifacts/spec-marketing-page-seo.md`
+  summary: Give each locale group a not-found.js that renders without dark-mode colours and with the right lang, so a page's own notFound() call (the empty-locale __no-posts slug, or unknown slugs in next dev) no longer shows Next's built-in fallback.
+  evidence: Pre-existing. Next's built-in not-found carries an @media (prefers-color-scheme: dark) rule that turns the body black while main.css keeps headings #000, and before the split it rendered inside the old root layout the same way. In the static export it is reached only when a locale has no published posts, at an unlinked noindex URL; unknown URLs already get app/global-not-found.js.
+- source_spec: `_bmad-output/implementation-artifacts/spec-marketing-page-seo.md`
+  summary: Carry seo-cockpit's `imageAlt` into post Open Graph images (og:image:alt), updating content/blog/README.md and the cockpit contract together.
+  evidence: cockpit/lib/frontmatter.ts writes `imageAlt`, but lib/blog.js ignores unknown keys and postMetadata emits `images: [{ url }]` only. The marketing-page SEO spec forbade front-matter contract changes.

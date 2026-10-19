@@ -1,5 +1,8 @@
-import SitePage from "../../components/site-page";
-import defaultSections from "../../content/default/index.js";
+import SitePage from "../../../components/site-page";
+import defaultSections from "../../../content/default/index.js";
+import { pageMetadata } from "../../../lib/seo";
+
+export const metadata = pageMetadata("about", "default");
 
 function AboutIntro() {
   return (
