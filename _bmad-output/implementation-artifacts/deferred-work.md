@@ -26,3 +26,30 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-blog-seo.md`
   summary: Post card images have no width/height, guaranteeing layout shift, and front-matter image paths are never checked for existence.
   evidence: components/blog-post-card.js renders a bare <img>. Fixing CLS needs dimensions the front-matter does not carry — the contract would have to gain them.
+- source_spec: none
+  summary: Give the marketing pages per-page Japanese/English titles and descriptions, canonical, hreflang with x-default, Organization/WebSite JSON-LD, a per-locale html lang and a per-page og:url.
+  evidence: Split on 2026-10-19 from the "fix every site defect" request so it runs after the content refresh, which deletes /why-us/ and /team/ and rewrites the copy the descriptions must match. Live audit the same day found one title "WA+CRAFT", one English description, no canonical/hreflang/JSON-LD on all ten marketing pages, lang="en" on every page and og:url fixed to the homepage, all from the static metadata in app/layout.js.
+- source_spec: none
+  summary: Make the contact form deliver mail again; it posts to /api/contact, which returns 404 on the live static export.
+  evidence: Split on 2026-10-19 from the "fix every site defect" request. It needs a human decision on the delivery backend (Vercel function, third-party form service, or leaving static export), which the content refresh spec already lists as out of scope.
+- source_spec: none
+  summary: Replace the BootstrapMade "Axis" stock person-*.webp photos on the team section with real photos of the named staff.
+  evidence: Split on 2026-10-19 from the "fix every site defect" request. Real photos must come from the client; until then the choice is between keeping stock faces, neutral placeholders or no photos, which is a human decision.
+- source_spec: `_bmad-output/implementation-artifacts/spec-site-content-refresh.md`
+  summary: Before deploying the content refresh, put the four why-us/team redirects on whatever origin actually serves wacraft-jp.com, or point the domain at Vercel, because the vercel.json redirects never run there.
+  evidence: Checked live on 2026-10-19. wacraft-jp.com answers through Cloudflare with no x-vercel-id, and its origin redirects /about to http://wacraft-jp.com:3010/about/, which does not load. wacraft-jp.vercel.app is on Vercel and answers /about with 308 /about/. Shipping the route deletions to the current origin would turn /why-us/ and /team/ into 404s. The broken :3010 redirect for every slash-less URL is a separate, already-live defect of that origin.
+- source_spec: `_bmad-output/implementation-artifacts/spec-site-content-refresh.md`
+  summary: Add a render or build-output test harness so rendered behaviour is tested, not only the data behind it.
+  evidence: The content and section modules are JSX, which `node --test` cannot import. No test checks that /about/ renders id="team" (the /team/ redirect target), or that the homepage teaser and the 関連ブログ blocks render nothing when their lists are empty. The tests only assert that featuredPosts/relatedPostsByService return []. Review findings 8, 9 and 16.
+- source_spec: `_bmad-output/implementation-artifacts/spec-site-content-refresh.md`
+  summary: Decide how posts published by seo-cockpit should reach a service's 関連ブログ, because the cockpit writes `category` (e.g. bpo) and never `tags`.
+  evidence: getPostsByTag reads only `tags`, and the byte-for-byte COCKPIT_POST fixture has `category: bpo` and no tags, so every automated post is left out of related lists. The refresh spec forbade any front-matter contract change beyond documenting `tags`. Either reading `category` (both repos' contract docs) or emitting `tags` from the cockpit needs a decision.
+- source_spec: `_bmad-output/implementation-artifacts/spec-site-content-refresh.md`
+  summary: Confirm the issuing authority printed next to enterprise registration number 0402324942 on /about/ (currently ダナン市計画投資局 / Department of Planning and Investment).
+  evidence: Unverified (maybe-false; medium if true). Reviewers say Vietnam's provincial planning-and-investment departments were merged into departments of finance before the company's 2026-03-03 founding, and the address row already uses the post-2025 ward naming. The text comes from decision 4 and company-profile.html. The registration certificate settles it.
+- source_spec: `_bmad-output/implementation-artifacts/spec-site-content-refresh.md`
+  summary: Give non-core-operations and business-standardization a card/OG image.
+  evidence: Neither post has `image` (the spec allowed omitting it when no asset fits), so in the homepage teaser and the BPO 関連ブログ only ai-bpo-operations shows a picture, and social shares of the new posts get no preview image.
+- source_spec: `_bmad-output/implementation-artifacts/spec-site-content-refresh.md`
+  summary: Remove or fill the 12 dead href="#" social icons on the team cards, now shown on /about/.
+  evidence: Pre-existing markup in content/{default,en}/team.js, previously on /team/ and the homepage. Best handled with the deferred team-photo replacement.

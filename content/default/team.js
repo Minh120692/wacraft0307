@@ -11,27 +11,6 @@ export default function TeamSection() {
         </p>
       </div>
 
-      <section id="director" className="director section">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="director-content">
-                <div className="director-info mt-4">
-                  <h4>Takahiko Nomoto</h4>
-                  <p className="text-muted">野本 隆彦 – 最高経営責任者</p>
-                  <p>経験豊富なリーダーとして、イノベーションと卓越性の追求を組織に導いています。テクノロジーとビジネスの交点で、変革的なソリューションを実現しています。</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="director-image">
-                <img src="/assets/img/person/person-m-12.webp" alt="Director Profile" className="img-fluid rounded" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <div className="container">
         <div className="row gy-5">
           <div className="d-flex justify-content-center">

@@ -1,3 +1,47 @@
+import { solutionHref } from "../../lib/site-content.js";
+
+const LOCALE = "default";
+
+/** Homepage cards: the short copy from the HOMEPAGE tab, not the solutions-page text. */
+const SERVICES = [
+  {
+    key: "ec",
+    icon: "bi-cart3",
+    name: "EC Operations Support",
+    catch: "EC運営を、より効率的に。",
+    text: "商品登録から在庫管理、販促、データレポートまで、ECモール運営を一貫してサポートします。",
+    malls: "Rakuten / Amazon / Yahoo! Shopping / LINE Shopping",
+  },
+  {
+    key: "bpo",
+    icon: "bi-diagram-3",
+    name: "Business Process Outsourcing",
+    catch: "日々の業務を、もっとスムーズに。",
+    text: "データ入力・処理などの定型業務から、ITツール活用や自動化まで、業務効率化を支援します。",
+  },
+  {
+    key: "marketing",
+    icon: "bi-megaphone",
+    name: "Digital Marketing Support",
+    catch: "デジタルの力で、集客を支える。",
+    text: "SEO、SNS、Webサイト運営、アクセス分析など、デジタルマーケティングを幅広くサポートします。",
+  },
+  {
+    key: "video",
+    icon: "bi-camera-video",
+    name: "Video Production Support",
+    catch: "伝わる動画を、ビジネスの力に。",
+    text: "ECやSNSマーケティングに活用できる商品紹介動画・広告動画などを制作します。",
+  },
+  {
+    key: "sales",
+    icon: "bi-person-lines-fill",
+    name: "Sales & CRM Support",
+    catch: "営業活動を、もっと効率的に。",
+    text: "見込み顧客のリスト作成からメール配信、アポイント設定、CRM管理まで、営業活動を支援します。",
+  },
+];
+
 export default function ServicesSection() {
   return (
     <section id="services" className="services section">
@@ -12,77 +56,25 @@ export default function ServicesSection() {
 
       <div className="container" data-aos="fade-up" data-aos-delay="100">
         <div className="row gy-5">
-          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div className="service-item">
-              <div className="service-icon">
-                <i className="bi bi-graph-up-arrow"></i>
-              </div>
-              <div>
-                <h3>BPO Service</h3>
-                <p>データ入力、顧客管理、リスト整備など、日々のバックオフィス業務を幅広くサポートします。業務負荷を大幅に軽減し、貴社チームがコア業務に集中できる環境をつくります。</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div className="service-item">
-              <div className="service-icon">
-                <i className="bi bi-palette"></i>
-              </div>
-              <div>
-                <h3>Sales Support</h3>
-                <p>ターゲット精度の高い見込み顧客リストの作成から、アポイント獲得、メールマーケティングまで、営業活動を効率化します。成果に直結する仕組みづくりを支援し、成約率の向上に貢献します。</p>
+          {SERVICES.map((service) => (
+            <div className="col-lg-4 col-md-6" key={service.key}>
+              <div className="service-item">
+                <div className="service-icon">
+                  <i className={`bi ${service.icon}`} aria-hidden="true"></i>
+                </div>
+                <div className="d-flex flex-column">
+                  <h3>{service.name}</h3>
+                  <p className="fw-bold mb-2">{service.catch}</p>
+                  <p className={service.malls ? "mb-3" : undefined}>{service.text}</p>
+                  {service.malls ? <p className="small">{service.malls}</p> : null}
+                  <a href={solutionHref(LOCALE, service.key)} className="service-link">
+                    <span aria-hidden="true">→</span> 詳しく見る
+                    <span className="visually-hidden">（{service.name}）</span>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div className="service-item">
-              <div className="service-icon">
-                <i className="bi bi-code-slash"></i>
-              </div>
-              <div>
-                <h3>AI Utilization Support</h3>
-                <p>AIツールの導入サポートや業務の自動化により、貴社のDX（デジタルトランスフォーメーション）を推進します。人とAIの最適な役割分担を設計し、生産性を最大化するワークフローを構築します。</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div className="service-item">
-              <div className="service-icon">
-                <i className="bi bi-megaphone"></i>
-              </div>
-              <div>
-                <h3>Recruitment Support</h3>
-                <p>候補者リストの作成から、スクリーニング、面接のスケジュール調整まで、採用活動のバックオフィス業務をトータルに代行します。煩雑な事務作業を切り離すことで、採用活動のスピードと質を大幅に向上させます。</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div className="service-item">
-              <div className="service-icon">
-                <i className="bi bi-people"></i>
-              </div>
-              <div>
-                <h3>Team Building</h3>
-                <p>日本語対応のベトナム人材を活用し、貴社の「もうひとつのチーム」を構築します。1名・数時間の小規模スタートから柔軟に対応し、企業の成長フェーズに合わせて最適なチーム体制をスケールアップさせることが可能です。</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div className="service-item">
-              <div className="service-icon">
-                <i className="bi bi-bar-chart"></i>
-              </div>
-              <div>
-                <h3>Data Analysis and Organization</h3>
-                <p>AIツールと人の判断を組み合わせ、大量のデータ入力やリスト整備、情報の構造化を効率的に行います。複雑なデータの整理を自動化・効率化することで、迅速な意思決定を支える高精度なデータ基盤を提供します。</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

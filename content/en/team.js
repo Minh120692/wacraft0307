@@ -11,27 +11,6 @@ export default function TeamSection() {
         </p>
       </div>
 
-      <section id="director" className="director section">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="director-content">
-                <div className="director-info mt-4">
-                  <h4>Takahiko Nomoto</h4>
-                  <p className="text-muted">Takahiko Nomoto - Chief Executive Officer</p>
-                  <p>As an experienced leader, I guide organizations toward innovation and the pursuit of excellence. I deliver transformative solutions at the intersection of technology and business.</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="director-image">
-                <img src="/assets/img/person/person-m-12.webp" alt="Director Profile" className="img-fluid rounded" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <div className="container">
         <div className="row gy-5">
           <div className="d-flex justify-content-center">

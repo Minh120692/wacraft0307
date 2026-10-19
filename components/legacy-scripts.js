@@ -6,7 +6,6 @@ export default function LegacyScripts({ idSuffix = "" }) {
       <Script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
       <Script src="/assets/vendor/php-email-form/validate.js" strategy="afterInteractive" />
       <Script src="/assets/vendor/aos/aos.js" strategy="afterInteractive" />
-      <Script src="/assets/vendor/purecounter/purecounter_vanilla.js" strategy="afterInteractive" />
       <Script id={`site-init${idSuffix}`} strategy="afterInteractive">
         {`(function () {
           const preloader = document.getElementById('preloader');
@@ -54,10 +53,6 @@ export default function LegacyScripts({ idSuffix = "" }) {
             }
           } else {
             document.documentElement.classList.add('aos-ready');
-          }
-
-          if (typeof PureCounter !== 'undefined') {
-            new PureCounter();
           }
         })();`}
       </Script>

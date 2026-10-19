@@ -1,20 +1,22 @@
 import SitePage from "../../components/site-page";
 import defaultSections from "../../content/default/index.js";
+import { relatedPostsByService } from "../../lib/blog";
+
+const LOCALE = "default";
 
 export default function SolutionsPage() {
-  const Solutions = defaultSections.services;
-  const Contact = defaultSections.contact;
+  const Solutions = defaultSections.solutions;
   const Footer = defaultSections.footer;
+  const related = relatedPostsByService(LOCALE);
 
   return (
     <SitePage
-      locale="default"
+      locale={LOCALE}
       activePage="solutions"
-      contact={<Contact />}
       footer={<Footer />}
       scriptSuffix="-solutions"
     >
-      <Solutions />
+      <Solutions related={related} />
     </SitePage>
   );
 }

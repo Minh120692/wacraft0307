@@ -48,7 +48,7 @@ YAML front-matter delimited by `---`, at the very top of the file.
 | `image` | string | no | Site-relative path to a hero / social image, e.g. `/assets/img/japan1.png`. Turned into an absolute URL for Open Graph and JSON-LD. Omit it and the post renders without an image. |
 | `author` | string | no | Defaults to `WA+CRAFT` in JSON-LD. |
 | `updated` | date | no | Last-modified date. Defaults to `date`. Must parse as a date when present. `updatedDate` is accepted in its place. |
-| `tags` | list of strings | no | Currently metadata only; not rendered. |
+| `tags` | list of strings | no | Not rendered on the post. A tag equal to a service key (`ec`, `bpo`, `marketing`, `video`, `sales`), compared case-insensitively, lists the post under that service's 関連ブログ (related posts) on the solutions page (`/solutions/#<key>`), newest first, up to three. Other tags are metadata only. |
 
 Unknown fields are ignored, so extra keys are safe to emit.
 

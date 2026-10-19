@@ -5,14 +5,17 @@ export default function HeroSection() {
         <div className="row align-items-center">
           <div className="col-lg-6">
             <div className="hero-content">
-              <h1>AIーBPO × 日本語対応   <br /> ベトナムチームで、業務を受託</h1>
-              <p className="fw-bold">日本語で伝わる。海外で動く。成果が返ってくる。</p>
+              <p className="small fw-bold text-uppercase mb-3">BPO × AI × BUSINESS SUPPORT</p>
+              <h1>人材不足時代でも、<br />事業成長を止めない。</h1>
+              <p className="mb-3">
+                日本語対応可能なベトナムチームとAI・業務改善を組み合わせ、<br />
+                EC運営、デジタルマーケティング、動画制作、営業支援まで。
+              </p>
               <p className="mb-5">
-                日本語対応のベトナム人材とAIを組み合わせ、業務の精度とスピードを両立。
-                中小企業、スタートアップ企業を支える、柔軟で拡張性の高いサービスを提供します。
+                中小企業・スタートアップ企業の成長に合わせ、必要な業務を柔軟に組み合わせ、拡張できるサービスを提供します。
               </p>
               <div className="hero-cta">
-                <a href="https://bpo-offshore.com/" className="btn-primary" target="_blank" rel="noopener noreferrer">まずは相談する</a>
+                <a href="#contact" data-contact-trigger="true" className="btn-primary">お問い合わせ →</a>
               </div>
             </div>
           </div>

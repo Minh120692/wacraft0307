@@ -1,20 +1,22 @@
 import SitePage from "../../../components/site-page";
 import enSections from "../../../content/en/index.js";
+import { relatedPostsByService } from "../../../lib/blog";
+
+const LOCALE = "en";
 
 export default function EnglishSolutionsPage() {
-  const Solutions = enSections.services;
-  const Contact = enSections.contact;
+  const Solutions = enSections.solutions;
   const Footer = enSections.footer;
+  const related = relatedPostsByService(LOCALE);
 
   return (
     <SitePage
-      locale="en"
+      locale={LOCALE}
       activePage="solutions"
-      contact={<Contact />}
       footer={<Footer />}
       scriptSuffix="-en-solutions"
     >
-      <Solutions />
+      <Solutions related={related} />
     </SitePage>
   );
 }

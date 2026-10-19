@@ -1,10 +1,23 @@
+import { pageHref, solutionHref } from "../../lib/site-content.js";
+
+const LOCALE = "default";
+
+/** The five 事業内容 names, each linking to its section on the solutions page. */
+const SERVICES = [
+  { key: "ec", name: "EC運営支援" },
+  { key: "bpo", name: "BPO・業務改善支援" },
+  { key: "marketing", name: "デジタルマーケティング支援" },
+  { key: "video", name: "動画制作支援" },
+  { key: "sales", name: "Sales・CRM支援" },
+];
+
 export default function FooterSection() {
   return (
     <footer id="footer" className="footer dark-background">
       <div className="container footer-top">
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
-            <a href="/" className="logo d-flex align-items-center flex-direction-column">
+            <a href={pageHref("home", LOCALE)} className="logo d-flex align-items-center flex-direction-column">
               <img src="/assets/img/logo.svg?v=20260728" alt="WA+CRAFT logo" className="logo-img" />
             </a>
             {/* <div className="brand-text">
@@ -16,22 +29,20 @@ export default function FooterSection() {
           <div className="col-lg-2 col-6 footer-links">
             <h4>Useful</h4>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/solutions">Our Solutions</a></li>
-              <li><a href="/why-us">Why Choose Us</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href={pageHref("home", LOCALE)}>Home</a></li>
+              <li><a href={pageHref("about", LOCALE)}>About</a></li>
+              <li><a href={pageHref("solutions", LOCALE)}>Our Solutions</a></li>
+              <li><a href={pageHref("blog", LOCALE)}>Blog</a></li>
+              <li><a href="#contact" data-contact-trigger="true">Contact</a></li>
             </ul>
           </div>
 
           <div className="col-lg-2 col-6 footer-links">
             <h4>Services</h4>
             <ul>
-              <li><a href="/solutions">BPOサービス</a></li>
-              <li><a href="/solutions">営業支援</a></li>
-              <li><a href="/solutions">AI活用支援</a></li>
-              <li><a href="/solutions">採用サポート</a></li>
-              <li><a href="/solutions">データ分析・整理</a></li>
+              {SERVICES.map(({ key, name }) => (
+                <li key={key}><a href={solutionHref(LOCALE, key)}>{name}</a></li>
+              ))}
             </ul>
           </div>
 

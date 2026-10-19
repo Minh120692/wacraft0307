@@ -1,22 +1,24 @@
 import SitePage from "../../components/site-page";
 import enSections from "../../content/en/index.js";
+import { featuredPosts } from "../../lib/blog";
+
+const LOCALE = "en";
 
 export default function EnglishHomePage() {
   const Hero = enSections.hero;
   const About = enSections.about;
   const Services = enSections.services;
-  const WhyUs = enSections["why-us"];
-  const Team = enSections.team;
-  const Contact = enSections.contact;
+  const BlogHighlights = enSections["blog-highlights"];
+  const ContactCta = enSections.contact;
   const Footer = enSections.footer;
 
   return (
-    <SitePage locale="en" activePage="home" contact={<Contact />} footer={<Footer />} scriptSuffix="-en">
+    <SitePage locale={LOCALE} activePage="home" footer={<Footer />} scriptSuffix="-en">
       <Hero />
       <About />
       <Services />
-      <WhyUs />
-      <Team />
+      <BlogHighlights posts={featuredPosts(LOCALE)} />
+      <ContactCta />
     </SitePage>
   );
 }

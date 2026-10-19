@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/why-us/", "destination": "/about/", "statusCode": 301 },
+    { "source": "/team/", "destination": "/about/#team", "statusCode": 301 },
+    { "source": "/en/why-us/", "destination": "/en/about/", "statusCode": 301 },
+    { "source": "/en/team/", "destination": "/en/about/#team", "statusCode": 301 }
+  ]
+}

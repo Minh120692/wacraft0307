@@ -1,3 +1,5 @@
+import { pageHref } from "../../lib/site-content.js";
+
 export default function AboutSection() {
   return (
     <section id="about" className="about section">
@@ -5,28 +7,17 @@ export default function AboutSection() {
         <div className="row align-items-center">
           <div className="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div className="content">
-              <h2>Through innovation and dedication, we deliver tangible results.</h2>
-              <p className="lead">We are a team of professionals passionate about delivering results that exceed expectations and driving meaningful transformation.</p>
-              <p>Based in Japan and Vietnam, we provide BPO services that combine Japanese-capable Vietnamese talent with the latest AI technology. Our mission is to convert the operational busywork that companies face into tangible, reliable results.</p>
-              <p>More than simple outsourcing, we optimize the balance of speed, quality, and cost to accelerate your growth as an integrated extension of your team. We remove the barriers to using overseas resources and enable smooth collaboration with the same ease as domestic teams.</p>
-
-              <div className="stats-row">
-                <div className="stat-item">
-                  <div className="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"></div>
-                  <div className="stat-label">Years of Experience</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="1"></div>
-                  <div className="stat-label">Completed Projects</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="240" data-purecounter-duration="1"></div>
-                  <div className="stat-label">Satisfied Clients</div>
-                </div>
-              </div>
+              <h2>The strengths of Japan and Vietnam, combined into one.</h2>
+              <p className="lead">
+                The care for craft that Japanese companies have built up, and the flexibility and potential of Vietnamese talent.<br />
+                At Wa+Craft, we believe that combining these strengths creates new value.
+              </p>
+              <p>And rather than relying on people alone, we add AI and process improvement, aiming for BPO that is more than simply doing tasks on your behalf.</p>
+              <p>We reduce the busywork that small businesses and startups carry, and build systems that are more efficient and keep growing.</p>
+              <p>Drawing on the strengths of both Japan and Vietnam, we support the growth of your operations and your business as your &ldquo;other team&rdquo;.</p>
 
               <div className="cta-section">
-                <a href="/en/team" className="btn-outline">Meet the Team</a>
+                <a href={pageHref("about", "en")} className="btn-outline">About Us →</a>
               </div>
             </div>
           </div>

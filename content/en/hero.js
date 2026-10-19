@@ -5,14 +5,17 @@ export default function HeroSection() {
         <div className="row align-items-center">
           <div className="col-lg-6">
             <div className="hero-content">
-              <h1>AI-based BPO and a Japanese-speaking Vietnamese team are available to handle your business.</h1>
-              <p className="fw-bold">Communicate in Japanese. Operate internationally. Deliver results.</p>
+              <p className="small fw-bold text-uppercase mb-3">BPO × AI × BUSINESS SUPPORT</p>
+              <h1>Even in a talent shortage,<br />keep your business growing.</h1>
+              <p className="mb-3">
+                A Japanese-speaking Vietnamese team combined with AI and process improvement,
+                covering e-commerce operations, digital marketing, video production and sales support.
+              </p>
               <p className="mb-5">
-                By combining Japanese-speaking Vietnamese personnel with AI, we achieve both accuracy and speed in our operations.
-                We provide flexible and scalable services to support small and medium-sized enterprises and startups.
+                We offer services that small and medium-sized businesses and startups can combine flexibly and scale as they grow.
               </p>
               <div className="hero-cta">
-                <a href="/en/about" className="btn-primary">Consult first</a>
+                <a href="#contact" data-contact-trigger="true" className="btn-primary">Contact Us →</a>
               </div>
             </div>
           </div>

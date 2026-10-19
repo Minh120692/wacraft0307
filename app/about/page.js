@@ -6,11 +6,15 @@ function AboutIntro() {
     <section className="page-title section light-background">
       <div className="container section-title" data-aos="fade-up">
         <span className="subtitle">About Us</span>
-        <h1>私たちについて</h1>
+        <h1>会社情報</h1>
+        <p className="lead fw-bold mb-4">日本とベトナムの力を、ひとつの価値に。</p>
+        <p className="mb-3">
+          日本企業が培ってきた仕事へのこだわりと、ベトナム人材が持つ柔軟性や可能性。<br />
+          Wa+Craftは、両国それぞれの強みを活かし、人材・AI・IT・業務改善を組み合わせることで、企業の業務をより良いかたちへ変えていきます。
+        </p>
         <p>
-          当社は、EC運営、SEO・SNSマーケティング、ショート動画制作、リード獲得支援を一貫して提供し、お客様の集客・販売促進・営業成果向上を支援します。
-          日本語対応可能な専門チームが、商品登録、コンテンツ制作、SNS運用、動画編集、顧客リスト作成、メール配信、CRM運用まで幅広く対応します。
-          人材力、ITツール、自動化、データ分析を活用し、低コストで高品質な運用体制を構築。お客様の売上拡大と業務効率化を同時に実現します。
+          単なる業務代行ではなく、お客様と共に考え、必要な業務を必要な分だけ柔軟に支える。<br />
+          それが、私たちWa+Craftの目指すBPOです。
         </p>
       </div>
     </section>
@@ -18,8 +22,10 @@ function AboutIntro() {
 }
 
 export default function AboutPage() {
-  const About = defaultSections.about;
-  const Contact = defaultSections.contact;
+  const Message = defaultSections.message;
+  const CompanyInfo = defaultSections["company-info"];
+  const Values = defaultSections.values;
+  const Team = defaultSections.team;
   const Footer = defaultSections.footer;
 
   return (
@@ -27,11 +33,13 @@ export default function AboutPage() {
       locale="default"
       activePage="about"
       intro={<AboutIntro />}
-      contact={<Contact />}
       footer={<Footer />}
       scriptSuffix="-about"
     >
-      <About />
+      <Message />
+      <CompanyInfo />
+      <Values />
+      <Team />
     </SitePage>
   );
 }

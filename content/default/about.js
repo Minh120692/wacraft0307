@@ -1,3 +1,5 @@
+import { pageHref } from "../../lib/site-content.js";
+
 export default function AboutSection() {
   return (
     <section id="about" className="about section">
@@ -5,28 +7,17 @@ export default function AboutSection() {
         <div className="row align-items-center">
           <div className="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div className="content">
-              <h2>革新と献身を重ね、確かな成果を届けます。</h2>
-              <p className="lead">私たちは、お客様の期待を超える成果を提供し、意味のある変革を推進することに情熱を注ぐプロフェッショナル集団です。</p>
-              <p>日本とベトナムを拠点に、日本語対応が可能な優秀なベトナム人材と最新のAI技術を融合させたBPOサービスを提供しています。私たちのミッションは、中小企業やスタートアップ企業の皆様が直面する業務の「手間」を、確かな「成果」へと変えることです。</p>
-              <p>単なる業務代行にとどまらず、スピード、品質、コストのバランスを最適化し、貴社の成長を加速させる「もうひとつのチーム」として寄り添います。海外リソース活用のハードルをゼロにし、国内と同じ感覚でスムーズな連携を実現します。</p>
-
-              {/* <div className="stats-row">
-                <div className="stat-item">
-                  <div className="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"></div>
-                  <div className="stat-label">経験年数</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="1"></div>
-                  <div className="stat-label">完了したプロジェクト</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="240" data-purecounter-duration="1"></div>
-                  <div className="stat-label">満足したクライアント</div>
-                </div>
-              </div> */}
+              <h2>日本とベトナムの力を、ひとつの価値に。</h2>
+              <p className="lead">
+                日本企業が培ってきた仕事へのこだわりと、ベトナム人材が持つ柔軟性や可能性。<br />
+                Wa+Craftは、それぞれの強みを掛け合わせることで、新しい価値を生み出せると考えています。
+              </p>
+              <p>そして、人材だけに頼るのではなく、AI・業務改善を組み合わせることで、単なる業務代行ではないBPOを目指しています。</p>
+              <p>中小企業・スタートアップ企業が抱える業務の「手間」を減らし、より効率的で、継続的に成長できる仕組みへ。</p>
+              <p>日本とベトナム、それぞれの強みを活かし、お客様にとっての「もうひとつのチーム」として、業務と事業の成長を支えます。</p>
 
               <div className="cta-section">
-                <a href="/team" className="btn-outline">チームに会う</a>
+                <a href={pageHref("about", "default")} className="btn-outline">私たちについて →</a>
               </div>
             </div>
           </div>

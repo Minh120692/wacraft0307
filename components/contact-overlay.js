@@ -4,35 +4,37 @@ import { useEffect, useState } from "react";
 
 const copy = {
   default: {
-    title: "問い合わせ",
-    subtitle: "Contact Us",
+    title: "お問い合わせ",
+    subtitle: "Contact",
     description: [
-      "まずはお気軽にご相談ください。",
+      "サービスに関するご質問やご相談は、こちらからお気軽にお問い合わせください。",
       "48時間以内に、こちらから折り返しご連絡いたします。",
     ],
-    formTitle: "メッセージを送る",
+    formTitle: "お問い合わせはこちら",
+    formLead: "お気軽に下記フォームにて送信ください。弊社担当よりご連絡させていただきます。",
     name: "氏名",
     email: "メールアドレス",
     subject: "件名",
     message: "メッセージ",
-    preferred: "面談ご希望日時 (任意)",
+    preferred: "面談ご希望日時（任意）",
     loading: "読み込み中",
     sent: "48時間以内にご連絡いたします。",
     submit: "メッセージを送る",
   },
   en: {
-    title: "Get in Touch",
-    subtitle: "Contact Us",
+    title: "Contact Us",
+    subtitle: "Contact",
     description: [
-      "Please feel free to contact us first.",
+      "For questions or advice about our services, please feel free to contact us here.",
       "We will get back to you within 48 hours.",
     ],
-    formTitle: "Send a Message",
+    formTitle: "Contact form",
+    formLead: "Fill in the form below and a member of our team will get back to you.",
     name: "Full Name",
     email: "Email Address",
     subject: "Subject",
     message: "Message",
-    preferred: "Preferred date/time (optional)",
+    preferred: "Preferred meeting date and time (optional)",
     loading: "Loading",
     sent: "We will respond within 48 hours.",
     submit: "Send Message",
@@ -57,11 +59,22 @@ export default function ContactOverlay({ locale = "default" }) {
       }
     }
 
+    // `#contact` lives inside the hidden popup, so a URL carrying that hash
+    // (shared link, new tab, click before hydration) must open it.
+    function onHashChange() {
+      if (window.location.hash === "#contact") {
+        setOpen(true);
+      }
+    }
+
     document.addEventListener("click", onClick);
     document.addEventListener("keydown", onKeyDown);
+    window.addEventListener("hashchange", onHashChange);
+    onHashChange();
     return () => {
       document.removeEventListener("click", onClick);
       document.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("hashchange", onHashChange);
     };
   }, []);
 
@@ -116,6 +129,7 @@ export default function ContactOverlay({ locale = "default" }) {
                   <div className="form-wrapper">
                     <div className="form-header">
                       <h3>{t.formTitle}</h3>
+                      <p className="mt-2 mb-0">{t.formLead}</p>
                     </div>
 
                     <form action="/api/contact" method="post" className="php-email-form">
