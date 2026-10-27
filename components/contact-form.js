@@ -200,10 +200,12 @@ export default function ContactForm({ locale = "default" }) {
                 {status === "sent" && <div className="sent-message d-block">{t.sent}</div>}
               </div>
 
-              <button type="submit" className="submit-btn" disabled={status === "sending"}>
-                <span>{t.submit}</span>
-                <i className="bi bi-arrow-right"></i>
-              </button>
+              <div className="text-center">
+                <button type="submit" className="submit-btn" disabled={status === "sending"}>
+                  <span>{t.submit}</span>
+                  <i className="bi bi-arrow-right"></i>
+                </button>
+              </div>
             </form>
           )}
         </div>
