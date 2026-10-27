@@ -33,7 +33,7 @@ export default function FooterSection() {
               <li><a href={pageHref("about", LOCALE)}>About</a></li>
               <li><a href={pageHref("solutions", LOCALE)}>Our Solutions</a></li>
               <li><a href={pageHref("blog", LOCALE)}>Blog</a></li>
-              <li><a href="#contact" data-contact-trigger="true">Contact</a></li>
+              <li><a href={pageHref("contact", LOCALE)}>Contact</a></li>
             </ul>
           </div>
 

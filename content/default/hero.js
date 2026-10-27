@@ -1,3 +1,5 @@
+import { pageHref } from "../../lib/site-content.js";
+
 export default function HeroSection() {
   return (
     <section id="hero" className="hero section light-background">
@@ -15,7 +17,7 @@ export default function HeroSection() {
                 中小企業・スタートアップ企業の成長に合わせ、必要な業務を柔軟に組み合わせ、拡張できるサービスを提供します。
               </p>
               <div className="hero-cta">
-                <a href="#contact" data-contact-trigger="true" className="btn-primary">お問い合わせ →</a>
+                <a href={pageHref("contact", "default")} className="btn-primary">お問い合わせ →</a>
               </div>
             </div>
           </div>

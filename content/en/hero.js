@@ -1,3 +1,5 @@
+import { pageHref } from "../../lib/site-content.js";
+
 export default function HeroSection() {
   return (
     <section id="hero" className="hero section light-background">
@@ -15,7 +17,7 @@ export default function HeroSection() {
                 We offer services that small and medium-sized businesses and startups can combine flexibly and scale as they grow.
               </p>
               <div className="hero-cta">
-                <a href="#contact" data-contact-trigger="true" className="btn-primary">Contact Us →</a>
+                <a href={pageHref("contact", "en")} className="btn-primary">Contact Us →</a>
               </div>
             </div>
           </div>

@@ -88,9 +88,9 @@ function AboutBox({ locale, labels }) {
       </p>
       <p className="blog-post-about-text">{labels.aboutText}</p>
       <div className="cta-section">
-        <a href="#contact" data-contact-trigger="true" className="btn-primary">
+        <Link href={pageHref("contact", locale)} className="btn-primary">
           {labels.contact}
-        </a>
+        </Link>
         <Link href={pageHref("solutions", locale)} className="btn-outline">
           {labels.services}
         </Link>

@@ -2345,6 +2345,7 @@ section,
   margin-bottom: 48px;
 }
 
+.contact .form-header h2,
 .contact .form-header h3 {
   font-size: 32px;
   font-weight: 300;
@@ -4240,8 +4241,11 @@ section,
 }
 
 
-/* Floating Button */
+/* Floating link to the contact page */
 .floating-contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -4259,67 +4263,15 @@ section,
 }
 
 .floating-contact-btn:hover {
+  color: #fff;
   transform: scale(1.1);
 }
 
-/* Popup Background */
-.contact-popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 99999;
-  padding: 20px;
-}
-
-/* Active Popup */
-.contact-popup.active {
-  display: flex;
-}
-
-/* Popup Box */
-.contact-popup-content {
-  background: #fff;
-  width: 100%;
-  max-width: 800px;
-  max-height: 90vh;
-  overflow-y: auto;
-  border-radius: 20px;
-  position: relative;
-  padding: 20px;
-  animation: popupFade 0.3s ease;
-}
-
-/* Close Button */
-.close-popup {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  border: none;
-  background: transparent;
-  font-size: 22px;
-  cursor: pointer;
-}
 .footer-about,
 .brand-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* Animation */
-@keyframes popupFade {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* Keep AOS sections visible only until AOS is initialized. */

@@ -23,7 +23,7 @@ export default function SiteHeader({ locale = "default", activePage = "home", la
               <li><Link href={chrome.aboutHref} className={navClass(chrome.aboutHref, activeHref)}>About Us</Link></li>
               <li><Link href={chrome.solutionsHref} className={navClass(chrome.solutionsHref, activeHref)}>Our Solutions</Link></li>
               <li><Link href={chrome.blogHref} className={navClass(chrome.blogHref, activeHref)}>Blog</Link></li>
-              <li><a href="#contact" data-contact-trigger="true">Contact</a></li>
+              <li><Link href={chrome.contactHref} className={navClass(chrome.contactHref, activeHref)}>Contact</Link></li>
               <li><Link href={chrome.langHref} className="lang-switch">{chrome.langLabel}</Link></li>
             </ul>
             <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>

@@ -1,7 +1,6 @@
-/**
- * Homepage contact call-to-action. The form itself lives in the contact popup,
- * which owns `#contact`; this section only opens it.
- */
+import { pageHref } from "../../lib/site-content.js";
+
+/** Homepage contact call-to-action, linking to the contact page that holds the form. */
 export default function ContactSection() {
   return (
     <section id="contact-cta" className="contact-cta section">
@@ -10,7 +9,7 @@ export default function ContactSection() {
         <h2>We&apos;d love to hear from you.</h2>
         <p>Tell us about your challenges and needs, and we will propose the support that fits best.</p>
         <div className="cta-section justify-content-center">
-          <a href="#contact" data-contact-trigger="true" className="btn-primary">Contact Us →</a>
+          <a href={pageHref("contact", "en")} className="btn-primary">Contact Us →</a>
         </div>
       </div>
     </section>

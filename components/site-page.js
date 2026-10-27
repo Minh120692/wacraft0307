@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 import LegacyScripts from "./legacy-scripts";
-import ContactOverlay from "./contact-overlay";
 import SiteHeader from "./site-header";
 import AosController from "./aos-controller";
+import { pageHref } from "../lib/site-content";
 
 export default function SitePage({
   locale = "default",
@@ -21,7 +23,11 @@ export default function SitePage({
         {children}
       </main>
       {footer}
-      <ContactOverlay locale={locale} />
+      {activePage !== "contact" && (
+        <Link href={pageHref("contact", locale)} className="floating-contact-btn" aria-label="Contact">
+          <i className="bi bi-chat-dots-fill"></i>
+        </Link>
+      )}
       <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center">
         <i className="bi bi-arrow-up-short"></i>
       </a>
